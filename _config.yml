@@ -25,7 +25,8 @@ description: | # this means to ignore newlines until "baseurl:"
  -Jose
  -Sebastian
  -Laura
- -Cristhian
+ -Cristhian.
+ rrrr
 
 
 baseurl: "/computacion-visual" # the subpath of your site, e.g. /blog
