@@ -22,7 +22,15 @@ title: Computacion Visual 2020-II
 email: your-email@example.com
 description: | # this means to ignore newlines until "baseurl:"
  Integrantes:
+<<<<<<< HEAD
  dssdadddddd
+=======
+ -Jose
+ -Sebastian
+ -Laura
+ -Cristhian
+
+>>>>>>> parent of ee82b95... mas tests ignorar
 
 baseurl: "/computacion-visual" # the subpath of your site, e.g. /blog
 url: "https://sfdelgadop.github.io" # the base hostname & protocol for your site, e.g. http://example.com
