@@ -21,11 +21,11 @@
 title: Computacion Visual 2020-II
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Integrantes del Grupo:
-    -Jose
-    -Sebastian
-    -Laura
-    -Cristhian
+  "Integrantes del Grupo:\n"
+    "-Jose\n"
+    "-Sebastian\n"
+    "-Laura\n"
+    "-Cristhian\n"
 baseurl: "/computacion-visual" # the subpath of your site, e.g. /blog
 url: "https://sfdelgadop.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
