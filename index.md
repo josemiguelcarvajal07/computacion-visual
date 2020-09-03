@@ -1,7 +1,18 @@
 ---
 layout: default
 ---
-**Bienvenido a la pagina de nuestro grupo**
+<p style="text-align: center;">
+
+<b>Bienvenido a la página de nuestro grupo!</b> 
+
+</p>
+
+<p style="text-align: center;">
+
+<b>Aquí subiremos todo lo que desarrollemos con respecto nuestro curso de Computación visual.</b> 
+
+</p>
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
