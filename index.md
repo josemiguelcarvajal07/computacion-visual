@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+**Bienvenido a la pagina de nuestro grupo**
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
