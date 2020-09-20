@@ -2,22 +2,21 @@
 layout: sample
 title: Conversion a escala de grises por promedio RGB
 permalink: /grises-promedio/
-custom_css: style
+custom_css: style.css
 custom_js:
-- p5.min.js
-- p5.sound.min.js
+# - p5.min.js
+# - p5.sound.min.js
 - averages.js
 ---
-Como lo indica el titulo, vamos a convertir una imagen a color a una imagen en escala de grises medianteel metodo de promedio RGB
+Como lo indica el titulo, vamos a convertir una imagen a color a una imagen en escala de grises mediante el metodo de promedio RGB
 
-Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen a color.
+Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen a color de un jardin.
 
 <img src="../images/Garden.jpg" alt="Garden">
 
-y ahora procedemos a transformar la imagen a una imagen de escala de grises mediante el metodo de promedio RGB usando el siguiente script:
+y ahora procedemos a transformar esta imagen a una imagen de escala de grises mediante el metodo de promedio RGB usando el siguiente script:
 
 ```js
-
 let img;
 
 function preload() {

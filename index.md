@@ -9,7 +9,7 @@ description: >
   Sebastian Felipe Delgado Pérez <br />
   Laura Vanessa Bohórquez Ramírez  <br />
   Cristhian Geovani Contreras Moncada  <br />
-custom_css: style
+custom_css: style.css
 custom_js:
 - p5.min.js
 - p5.sound.min.js
@@ -27,8 +27,24 @@ custom_js:
 </p>
 
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
+<h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
-<h1 class="center-text">Links</h1>
-<h3 class="center-text">Taller de análisis de imágenes por software</h3>
+- Conversión a escala de grises
 
-[Escala de grises (promedio RGB)](https://sfdelgadop.github.io/computacion-visual/grises-promedio/)
+  - [Escala de grises (Promedio RGB).](https://sfdelgadop.github.io/computacion-visual/grises-promedio/)
+
+  - [Escala de grises (Luma).](https://sfdelgadop.github.io/computacion-visual/grises-luma/)
+
+- Máscaras de convolución.
+
+  - TODO ....
+
+  - TODO ....
+
+- Despliegue del histograma y segmentación.
+
+  - Histograma.
+
+  - Segmentación.
+
+- Medición de la eficiencia computacional.
