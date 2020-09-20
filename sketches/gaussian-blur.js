@@ -6,16 +6,16 @@ function preload() {
 
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
-    myCanvas.parent('box-blur');
+    myCanvas.parent('gaussian-blur');
     pixelDensity(1);
 }
 
 function draw() {
     background(0, 0, 0);
 
-    var k1 = [[1, 1, 1],
-                [1, 1, 1],
-                [1, 1, 1]];
+    var k1 = [[1, 2, 1],
+              [2, 4, 2],
+              [1, 2, 1]];
 
     img.loadPixels();
     
@@ -42,7 +42,7 @@ function draw() {
             p6 = img.pixels[ll]*k1[2][0]; // lower left
             p7 = img.pixels[lc]*k1[2][1]; // lower mid
             p8 = img.pixels[lr]*k1[2][2]; // lower right
-            var red = (p0+p1+p2+p3+p4+p5+p6+p7+p8)/9;
+            var red = (p0+p1+p2+p3+p4+p5+p6+p7+p8)/16;
                 
             p0 = img.pixels[ul+1]*k1[0][0]; // upper left
             p1 = img.pixels[uc+1]*k1[0][1]; // upper mid
@@ -53,7 +53,7 @@ function draw() {
             p6 = img.pixels[ll+1]*k1[2][0]; // lower left
             p7 = img.pixels[lc+1]*k1[2][1]; // lower mid
             p8 = img.pixels[lr+1]*k1[2][2]; // lower right
-            var green = (p0+p1+p2+p3+p4+p5+p6+p7+p8)/9;
+            var green = (p0+p1+p2+p3+p4+p5+p6+p7+p8)/16;
                 
             p0 = img.pixels[ul+2]*k1[0][0]; // upper left
             p1 = img.pixels[uc+2]*k1[0][1]; // upper mid
@@ -64,7 +64,7 @@ function draw() {
             p6 = img.pixels[ll+2]*k1[2][0]; // lower left
             p7 = img.pixels[lc+2]*k1[2][1]; // lower mid
             p8 = img.pixels[lr+2]*k1[2][2]; // lower right
-            var blue = (p0+p1+p2+p3+p4+p5+p6+p7+p8)/9;
+            var blue = (p0+p1+p2+p3+p4+p5+p6+p7+p8)/16;
                 
             img.pixels[mc] = red;
             img.pixels[mc+1] = green;
