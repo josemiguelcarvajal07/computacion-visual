@@ -1,3 +1,10 @@
+---
+layout: sample
+title: Guia
+permalink: /guia/
+---
+[INDEX LOCAL](http://127.0.0.1:4000/computacion-visual/)
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).

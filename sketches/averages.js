@@ -28,7 +28,7 @@ function draw(){
         pixels[index+0] = bw;
         pixels[index+1] = bw;
         pixels[index+2] = bw;
+      }
   }
-}
 updatePixels();
 }

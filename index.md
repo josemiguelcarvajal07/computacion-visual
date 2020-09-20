@@ -26,6 +26,8 @@ custom_js:
 
 </p>
 
+<!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
+
 <h1 class="center-text">Links</h1>
 <h3 class="center-text">Taller de análisis de imágenes por software</h3>
 
