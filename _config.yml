@@ -19,14 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Computación Visual 2020-II
-description: >
- <b>Universidad Nacional de Colombia</b> <br />
-   <br />  
-  Integrantes del grupo: <br />
-  José Miguel Carvajal Jimenez  <br />
-  Sebastian Felipe Delgado Pérez <br />
-  Laura Vanessa Bohórquez Ramírez  <br />
-  Cristhian Geovani Contreras Moncada  <br />
 tags: ["front-matter", "description", "special-block", "yaml", "multi-line"]
 draft: false
 
