@@ -6,7 +6,7 @@ function preload() {
   };
 
 function setup () {
-var myCanvas = createCanvas(960, 640);
+var myCanvas = createCanvas(img.width, img.height);
 myCanvas.parent('luma');
 img.loadPixels();
 pixelDensity(1);

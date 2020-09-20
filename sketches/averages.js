@@ -6,7 +6,7 @@ function preload() {
   };
 
 function setup () {
-var myCanvas = createCanvas(886, 664);
+var myCanvas = createCanvas(img.width, img.height);
 myCanvas.parent('averages');
 img.loadPixels();
 pixelDensity(1);

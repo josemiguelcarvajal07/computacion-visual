@@ -35,9 +35,9 @@ custom_js:
 
   - [Escala de grises (Luma).](https://sfdelgadop.github.io/computacion-visual/grises-luma/)
 
-- Máscaras de convolución.
+- Matrices de convolución.
 
-  - TODO ....
+  - [Matríz de convolución Box-Blur.](https://sfdelgadop.github.io/computacion-visual/box-blur-matrix/)
 
   - TODO ....
 
