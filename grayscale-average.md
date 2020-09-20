@@ -1,7 +1,7 @@
 ---
 layout: sample
 title: Escala de grises por promedio RGB
-permalink: /grises-promedio
+permalink: /grises-promedio/
 custom_css: style
 custom_js:
 - p5.min.js
