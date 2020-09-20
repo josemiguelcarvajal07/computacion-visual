@@ -39,6 +39,8 @@ custom_js:
 
   - [Matríz de convolución Box-Blur.](https://sfdelgadop.github.io/computacion-visual/box-blur-matrix/)
 
+  - [Matríz de convolución Gaussian-Blur.](https://sfdelgadop.github.io/computacion-visual/gaussian-blur-matrix/)
+
   - TODO ....
 
 - Despliegue del histograma y segmentación.
