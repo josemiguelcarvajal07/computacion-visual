@@ -14,7 +14,7 @@ Como lo indica el titulo, vamos a convertir una imagen a color a una imagen en e
 
 Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen a color de un gato.
 
-<img src="../images/Cat.jpg" alt="Cat">
+<img src="../images/Cat.jpg" alt="Cat" class="center-image">
 
 y ahora procedemos a transformar esta imagen a una imagen de escala de grises mediante el metodo de promedio RGB usando el siguiente script:
 
