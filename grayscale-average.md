@@ -6,7 +6,6 @@ custom_css: style
 custom_js:
 - p5.min.js
 - p5.sound.min.js
-- example.js
 - averages.js
 ---
 <h1 class="center-text">Conversión a escala de grises: Promedio RGB.</h1> 

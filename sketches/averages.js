@@ -2,7 +2,7 @@
 let img;
 
 function preload() {
-    img = loadImage('images/Garden.jpg');
+    img = loadImage('../images/Garden.jpg');
   };
 
 function setup () {

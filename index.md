@@ -13,8 +13,6 @@ custom_css: style
 custom_js:
 - p5.min.js
 - p5.sound.min.js
-- example.js
-- averages.js
 ---
 <p class="center-text">
 
