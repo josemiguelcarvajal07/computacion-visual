@@ -37,11 +37,17 @@ custom_js:
 
 - Matrices de convolución.
 
+  - [Matríz de convolución Identity.](https://sfdelgadop.github.io/computacion-visual/identity-matrix/)
+
   - [Matríz de convolución Box-Blur.](https://sfdelgadop.github.io/computacion-visual/box-blur-matrix/)
 
   - [Matríz de convolución Gaussian-Blur.](https://sfdelgadop.github.io/computacion-visual/gaussian-blur-matrix/)
 
-  - TODO ....
+  - [Matríz de convolución Sharpen.(Mejorar)](https://sfdelgadop.github.io/computacion-visual/sharpen-matrix/)
+
+  - [Matríz de convolución Outline. (Mejorar)](https://sfdelgadop.github.io/computacion-visual/outline-matrix/)
+  
+  - TODO Sobel(top, bottom, etc.)....
 
 - Despliegue del histograma y segmentación.
 

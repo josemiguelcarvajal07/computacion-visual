@@ -8,7 +8,7 @@ custom_js:
 # - p5.sound.min.js
 - averages.js
 ---
-Como lo indica el titulo, vamos a convertir una imagen a color a una imagen en escala de grises mediante el metodo de promedio RGB
+Como lo indica el titulo, vamos a convertir una imagen a color a una imagen en escala de grises mediante el metodo de promedio RGB.
 
 Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen a color de un jardín.
 
