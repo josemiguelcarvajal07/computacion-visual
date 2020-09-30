@@ -25,7 +25,7 @@ function preload() {
 
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
-    myCanvas.parent('outline');
+    myCanvas.parent('sobel-top');
     pixelDensity(1);
 }
 
