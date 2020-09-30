@@ -35,9 +35,9 @@ function draw() {
     noLoop();
 }
 
-function keypPressed() {
+function keyPressed() {
     matrixsize = 3;
-    if (key == 'a') {
+    if (key === 'a') {
         k1 = [[-1, -1, -1],
         [-1, 8, -1],
         [-1, -1, -1]];
