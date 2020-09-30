@@ -1,6 +1,6 @@
 ---
 layout: sample
-title: Matríz de convolución Outline
+title: Sobel Top
 permalink: /sobel-top/
 custom_css: style.css
 custom_js:
