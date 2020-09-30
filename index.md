@@ -57,7 +57,7 @@ custom_js:
 
 - Despliegue del histograma y segmentación.
 
-  - Histograma.
+  - [Histograma](https://sfdelgadop.github.io/computacion-visual/histograma/)
 
   - Segmentación.
 
