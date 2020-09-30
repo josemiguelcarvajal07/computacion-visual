@@ -37,10 +37,22 @@ function draw() {
 
 function keyPressed() {
     matrixsize = 3;
-    if (key === 'a') {
-        k1 = [[-1, -1, -1],
-        [-1, 8, -1],
-        [-1, -1, -1]];
+    if (key == 'g') {
+        matrix = [[-1, -2, -1],
+        [0, 0, 0],
+        [1, 2, 1]];
+    } else if (key == 'h') {
+        matrix = [[1, 0, -1],
+        [2, 0, -2],
+        [1, 0, -1]];
+    } else if (key == 'i') {
+        matrix = [[1, 0, 1],
+        [-2, 0, 2],
+        [-1, 0, 1]];
+    } else if (key == 'j') {
+        matrix = [[1, 2, 1],
+        [0, 0, 0],
+        [-1, -2, -1]];
     }
 }
 
