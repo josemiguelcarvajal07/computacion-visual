@@ -50,6 +50,8 @@ custom_js:
   - [Matríz de convolución Sharpen.(Mejorar)](https://sfdelgadop.github.io/computacion-visual/sharpen-matrix/)
 
   - [Matríz de convolución Outline. (Mejorar)](https://sfdelgadop.github.io/computacion-visual/outline-matrix/)
+
+  - [Sobel Top](https://sfdelgadop.github.io/computacion-visual/sobel-top/)
   
   - TODO Sobel(top, bottom, etc.)....
 
