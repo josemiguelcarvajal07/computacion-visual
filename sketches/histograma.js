@@ -1,4 +1,15 @@
-varimg;
+let img;
+let Bhist = true;
+let BhistR = false;
+let BhistG = false;
+let BhistB = false;
+let hist = [];
+let histR = [];
+let histG = [];
+let histB = [];
+let histGMax;
+let histRMax
+let histBMax
 
 function preload() {
     img = loadImage('../images/Tiger.jpg');
@@ -7,29 +18,55 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
+    mask = createGraphics(img.width, img.height);
     pixelDensity(1);
 }
 
 function draw() {
     background(0, 0, 0);
 
-    var k1 = [[0, 0, 0],
-    [0, 1, 0],
-    [0, 0, 0]];
-
     img.loadPixels();
+    img.updatePixels();
+    image(img, 0, 0, img.width, img.height);
+    noLoop();
 
-    var w = img.width;
-    var h = img.height;
-
-    for (var y = 0; y < h; y++) {
-        for (var x = 0; x < w; x++) {
-            c = convolution(x, y, k1, img);
-            var loc = x + y * w;
-            img.pixels[loc] = c
+    if (Bhist) {
+        mask.storke(255, 0, 0, 255);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(hist[which], 0, histRMax, img.height, 0));
+            mask.line(i, img.height, i, y);
         }
     }
 
+    if (BhistB) {
+        mask.storke(0, 0, 255, 100);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(histB[which], 0, histBMax, img.height, 0));
+            mask.line(i, img.height, i, y);
+        }
+    }
+
+    if (BhistG) {
+        mask.storke(0, 255, 0, 100);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(histG[which], 0, histGMax, img.height, 0));
+            mask.line(i, img.height, i, y);
+        }
+    }
+
+    if (BhistR) {
+        mask.storke(0, 255, 0, 100);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(histG[which], 0, histGMax, img.height, 0));
+            mask.line(i, img.height, i, y);
+        }
+    }
+
+    img.loadPixels();
     img.updatePixels();
     image(img, 0, 0, img.width, img.height);
     noLoop();
