@@ -8,6 +8,8 @@ custom_js:
 ---
 A lo largo de esta página, vamos a documentar el estudio realizado para extraer el histograma de una imagen usango p5.js, las imagenes a analizar se pueden ir camiando mediante las letras:
 
+<img src="../images/sekiro.jpg" alt="hisgrama" class="center-image">
+
 - Letra "a": para mostrar la imagen de subnautica
 - Letra "b": para mostrar la imagen de Assassin's Creed Unity
 - Letra "c": para mostrar la imagen de Assassin's Creed Oddysey
