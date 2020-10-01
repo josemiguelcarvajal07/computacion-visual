@@ -6,18 +6,32 @@ custom_css: style.css
 custom_js:
 - histograma.js
 ---
-Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolucion Outline, la cual esta representada de esta manera:
+A lo largo de esta página, vamos a documentar el estudio realizado para extraer el histograma de una imagen usango p5.js, las imagenes a analizar se pueden ir camiando mediante las letras:
 
-<img src="../images/Outline-matrix.svg" alt="Outline Matrix" class="center-matrix">
+- Letra "a": para mostrar la imagen de subnautica
+- Letra "b": para mostrar la imagen de Assassin's Creed Unity
+- Letra "c": para mostrar la imagen de Assassin's Creed Oddysey
+- Letra "d": para mostrar la imagen de Minecraft
+- Letra "e": para mostrar la imagen de Sekiro: Shadows Die Twice
 
-Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen de un Tigre.
+El metodo utilizado para realizar el análisis es iterar por cada uno de los pixeles en la imagen y guardar sus propiedades en arreglos de 256 posiciones. Cada elemento de estos nos indica cuántos pixeles tienen el nivel de brillo, 
+rojo, verde o azul igual al valor de la posición del arrelgo en la cual se encuentra. Cada valor de los arreglos se grafica en el histograma utilizando el método .line()
 
-<img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
-
-y ahora procedemos a transformar esta imagen con la matriz de convolucion usando el siguiente script:
+El código utilizado para realizar lo descrito anteriormente y obtener el histograma de la imagen seleccionada es el siguente:
 
 ```js
-var img;
+let img;
+let Bhist = true;
+let BhistR = true;
+let BhistG = true;
+let BhistB = true;
+let hist = [];
+let histR = [];
+let histG = [];
+let histB = [];
+let histGMax;
+let histRMax
+let histBMax
 
 function preload() {
     img = loadImage('../images/Tiger.jpg');
@@ -26,69 +40,101 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
+    mask = createGraphics(img.width, img.height);
     pixelDensity(1);
 }
 
 function draw() {
     background(0, 0, 0);
 
-    var k1 = [[0, 0, 0],
-    [0, 1, 0],
-    [0, 0, 0]];
-
     img.loadPixels();
+    img.updatePixels();
+    image(img, 0, 0, img.width, img.height);
+    noLoop();
 
-    var w = img.width;
-    var h = img.height;
-
-    for (var y = 0; y < h; y++) {
-        for (var x = 0; x < w; x++) {
-            c = convolution(x, y, k1, img);
-            var loc = x + y * w;
-            img.pixels[loc] = c
+    if (Bhist) {
+        mask.storke(255, 0, 0, 255);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(hist[which], 0, histRMax, img.height, 0));
+            mask.line(i, img.height, i, y);
         }
     }
 
+    if (BhistB) {
+        mask.storke(0, 0, 255, 100);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(histB[which], 0, histBMax, img.height, 0));
+            mask.line(i, img.height, i, y);
+        }
+    }
+
+    if (BhistG) {
+        mask.storke(0, 255, 0, 100);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(histG[which], 0, histGMax, img.height, 0));
+            mask.line(i, img.height, i, y);
+        }
+    }
+
+    if (BhistR) {
+        mask.storke(0, 255, 0, 100);
+        for (var i = 0; i < img.width; i += 2) {
+            var which = int(map(i, 0, img.width, 0, 255));
+            var y = int(map(histG[which], 0, histGMax, img.height, 0));
+            mask.line(i, img.height, i, y);
+        }
+    }
+
+    img.loadPixels();
     img.updatePixels();
     image(img, 0, 0, img.width, img.height);
     noLoop();
 }
 
-function keypPressed() {
-    matrixsize = 3;
-    if (key == 'a') {
-        k1 = [[-1, -1, -1],
-        [-1, 8, -1],
-        [-1, -1, -1]];
+function newImage(image) {
+    let hist = [256];
+    let histR = [256];
+    let histG = [256];
+    let histB = [256];
+  
+    for (var i = 0; i < image.width; i++) {
+      for (var j = 0; j < image.height; j++) {
+        var pixel = image.get(i, j);
+        hist[int(brightness(pixel))]++;
+        histR[int(red(pixel))]++;
+        histG[int(green(pixel))]++;
+        histB[int(blue(pixel))]++;
+      }
     }
-}
+    histMax = max(hist);
+    histRMax = max(histR);
+    histGMax = max(histG);
+    histBMax = max(histB);
+  }
 
-function convolution(x, y, k1, matrixsize, mask) {
-    var rtotal = 0.0;
-    var gtotal = 0.0;
-    var btotal = 0.0;
-    for (var i = 0; i < matrixsize; i++) {
-        for (var j = 0; j < matrixsize; j++) {
-            var xloc = x + i;
-            var yloc = y + j;
-            var loc = xloc + mask.width * yloc;
-            loc = constrain(loc, 0, mask.pixels.length - 1);
-            rtotal += (red(mask.pixels[loc])) * k1[i][j];
-            gtotal += (green(mask.pixels[loc])) * k1[i][j];
-            btotal += (blue(mask.pixels[loc])) * k1[i][j];
-        }
-    }
-    rtotal = constrain(rtotal, 0, 256);
-    gtotal = constrain(gtotal, 0, 256);
-    btotal = constrain(btotal, 0, 256);
-    if (!inv) {
-        return color(rtotal, gtotal, btotal);
-    } else {
-        return color(255 - rtotal, 255 - gtotal, 255 - btotal)
-    }
+function keyPressed() {
+    if(key == 'a'){
+        img = loadImage("subnautica.jpg");
+        newImage(img);
+      }if(key == 'b'){
+        img = loadImage("unity.jpg");
+        newImage(img);
+      }if(key == 'c'){
+        img = loadImage("oddysey.jpg");
+        newImage(img);
+      }if(key == 'd'){
+        img = loadImage("minecraft.jpg");
+        newImage(img);
+      }if(key == 'e'){
+        img = loadImage("sekiro.jpg");
+        newImage(img);
+      }
 }
 ```
-Finalmente como resultado obtenemos la imagen transfromada usando la matriz de Outline.
+Finalmente como resultados obtenemos el siguiente resultado.
 
 <div class="center-text">
 
