@@ -95,19 +95,19 @@ function newImage(image) {
 
 function keyPressed() {
     if(key == 'a'){
-        img = loadImage("Australia.jpg");
+        img = loadImage("subnautica.jpg");
         newImage(img);
       }if(key == 'b'){
-        img = loadImage("RolandGarros.jpg");
+        img = loadImage("unity.jpg");
         newImage(img);
       }if(key == 'c'){
-        img = loadImage("Wimbledon.jpg");
+        img = loadImage("oddysey.jpg");
         newImage(img);
       }if(key == 'd'){
-        img = loadImage("USOpen.jpg");
+        img = loadImage("minecraft.jpg");
         newImage(img);
       }if(key == 'e'){
-        img = loadImage("OldWimbledon.jpg");
+        img = loadImage("sekiro.jpg");
         newImage(img);
       }
 }
