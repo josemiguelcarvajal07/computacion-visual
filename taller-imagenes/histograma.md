@@ -50,6 +50,7 @@ function draw() {
     background(0, 0, 0);
 
     img.loadPixels();
+    mask.loadPixels()
 
     if (Bhist) {
       mask.background(100);
@@ -112,9 +113,9 @@ function newImage(image) {
     histGMax = max(histG);
     histBMax = max(histB);
 
-    img.loadPixels();
-    img.updatePixels();
-    image(img, 0, 0, img.width, img.height);
+    mask.loadPixels();
+    mask.updatePixels();
+    image(mask, 0, 0, mask.width, mask.height);
   }
 
 function keyPressed() {
