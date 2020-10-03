@@ -55,7 +55,6 @@ function draw() {
     mask.background(255);
 
     if (Bhist) {
-      mask.background(100);
       mask.stroke(255, 0, 0, 255);
       for (var i = 0; i < img.width; i += 2) {
         var which = int(map(i, 0, img.width, 0, 255));
@@ -65,7 +64,6 @@ function draw() {
     }
 
     if (BhistB) {
-      mask.background(100);
       mask.stroke(0, 0, 255, 100);
       for (var i = 0; i < img.width; i += 2) {
         var which = int(map(i, 0, img.width, 0, 255));
@@ -75,7 +73,6 @@ function draw() {
     }
 
     if (BhistG) {
-      mask.background(100);
       mask.stroke(0, 255, 0, 100);
       for (var i = 0; i < img.width; i += 2) {
         var which = int(map(i, 0, img.width, 0, 255));
@@ -85,7 +82,6 @@ function draw() {
     }
 
     if (BhistR) {
-      mask.background(100);
       mask.stroke(0, 255, 0, 100);
       for (var i = 0; i < img.width; i += 2) {
         var which = int(map(i, 0, img.width, 0, 255));
