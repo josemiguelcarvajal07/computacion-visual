@@ -9,16 +9,19 @@ custom_js:
 
 A lo largo de esta página, vamos a documentar el estudio realizado para extraer el histograma de una imagen usango p5.js, las imagenes a analizar se pueden ir camiando mediante las letras:
 
-<img src="../images/sekiro.jpg" alt="hisgrama" class="center-image">
-
 - Letra "a": para mostrar la imagen de subnautica
 - Letra "b": para mostrar la imagen de Assassin's Creed Unity
 - Letra "c": para mostrar la imagen de Assassin's Creed Oddysey
 - Letra "d": para mostrar la imagen de Minecraft
 - Letra "e": para mostrar la imagen de Sekiro: Shadows Die Twice
 
-El metodo utilizado para realizar el análisis es iterar por cada uno de los pixeles en la imagen y guardar sus propiedades en arreglos de 256 posiciones. Cada elemento de estos nos indica cuántos pixeles tienen el nivel de brillo,
-rojo, verde o azul igual al valor de la posición del arrelgo en la cual se encuentra. Cada valor de los arreglos se grafica en el histograma utilizando el método .line()
+El metodo utilizado para realizar el análisis es iterar por cada uno de los pixeles en la imagen y guardar sus propiedades en arreglos de 256 posiciones. Cada elemento de estos nos indica cuántos pixeles tiene de rojo, verde o azul igual al valor de la posición del arrelgo en la cual se encuentra. Cada valor de los arreglos se grafica en el histograma utilizando el método rect()
+
+Para mostrar u ocultar cada histograma de color utilice los siguientes comandos:
+
+- Número "1": mostrar u ocultar el histograma del color rojo
+- Número "2": mostrar u ocultar el histograma del color azul
+- Número "3": mostrar u ocultar el histograma del color verde
 
 El código utilizado para realizar lo descrito anteriormente y obtener el histograma de la imagen seleccionada es el siguente:
 
@@ -43,9 +46,11 @@ function setup() {
   height = 600;
 
   createCanvas(width, height);
+  noLoop();
 }
 
 function draw() {
+  
   img.loadPixels();
 
   background(255);
@@ -99,18 +104,20 @@ function draw() {
   }
 
   image(img, 0, 0);
-  loop(); 
 }
 
 function keyPressed() {
   if(key === '1'){
     BhistR = !BhistR;
+    redraw();
   }
   if(key === '2'){
     BhistB = !BhistB;
+    redraw();
   }
   if(key === '3'){
     BhistG = !BhistG;
+    redraw();
   }
   if (key === "a") {
     img = loadImage("../images/subnautica.jpg");

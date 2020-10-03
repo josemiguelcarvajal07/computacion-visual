@@ -10,7 +10,7 @@ var histRMax = 0;
 var histBMax = 0;
 
 function preload() {
-  img = loadImage("../images/sekiro.jpg");
+  img = loadImage('../images/sekiro.jpg');
 }
 
 function setup() {
@@ -18,6 +18,7 @@ function setup() {
   height = 600;
 
   createCanvas(width, height);
+  noLoop();
 }
 
 function draw() {
@@ -74,18 +75,20 @@ function draw() {
   }
 
   image(img, 0, 0);
-  loop(); 
 }
 
 function keyPressed() {
   if(key === '1'){
     BhistR = !BhistR;
+    redraw();
   }
   if(key === '2'){
     BhistB = !BhistB;
+    redraw();
   }
   if(key === '3'){
     BhistG = !BhistG;
+    redraw();
   }
   if (key === "a") {
     img = loadImage("../images/subnautica.jpg");
