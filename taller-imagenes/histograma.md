@@ -84,7 +84,7 @@ function setup() {
 }
 
 function draw() {
-
+  
 }
 ```
 <div class="histograma" id='histograma'></div>
