@@ -38,20 +38,17 @@ let histRMax;
 let histBMax;
 
 function preload() {
-  img = loadImage("../images/sekiro.jpg");
+  img = loadImage('../images/sekiro.jpg');
 }
 
 function setup() {
-  var myCanvas = createCanvas(img.width, img.height);
-  myCanvas.parent("histograma");
-  mask = createGraphics(640, 360);
-  pixelDensity(1);
-}
+  width = img.width;
+  height = img.height;
 
-function draw() {
-  background(0, 0, 0);
-  img.loadPixels();
-  newImage(img);
+  h1 = createElement("h1", "Levels Histogram");
+  h1.style("z-index", 50);
+  h1.style("x-index", 150);
+  h1.style("x-index", width / 2);
 
   if (Bhist) {
     mask.stroke(255, 0, 0, 255);
@@ -62,57 +59,39 @@ function draw() {
     }
   }
 
-  if (BhistB) {
-    mask.stroke(0, 0, 255, 100);
-    for (var i = 0; i < img.width; i += 2) {
-      var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(histB[which], 0, histBMax, img.height, 0));
-      mask.line(i, img.height, i, y);
-    }
-  }
+  img.loadPixels();
 
-  if (BhistG) {
-    mask.stroke(0, 255, 0, 100);
-    for (var i = 0; i < img.width; i += 2) {
-      var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(histG[which], 0, histGMax, img.height, 0));
-      mask.line(i, img.height, i, y);
-    }
-  }
-
-  if (BhistR) {
-    mask.stroke(0, 255, 0, 100);
-    for (var i = 0; i < img.width; i += 2) {
-      var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(histR[which], 0, histRMax, img.height, 0));
-      mask.line(i, img.height, i, y);
-    }
-  }
-
-  image(original, 0, 0, img.width, img.height);
-  image(mask, 0, 360, img.width, img.height);
-}
-
-function newImage(image) {
-  hist = [256];
-  histR = [256];
-  histG = [256];
-  histB = [256];
-
-  for (var i = 0; i < image.width; i++) {
-    for (var j = 0; j < image.height; j++) {
-      var pixel = image.get(i, j);
-      hist[int(brightness(pixel))]++;
+  background(255);
+  var pixelBrt = [];
+  
+  for (var i = 0; i < img.width; i++) {
+    for (var j = 0; j < img.height; j++) {
+      pixel = img.get(i, j);
+      var loc = (x + y * img.width) * 4;
+      pixelBrt[img.pixels[loc + 4]]++;
       histR[int(red(pixel))]++;
       histG[int(green(pixel))]++;
       histB[int(blue(pixel))]++;
     }
   }
-  histMax = max(hist);
-  histRMax = max(histR);
-  histGMax = max(histG);
-  histBMax = max(histB);
+  
+  var maxPixels = 0;
+  for (i = 0; i < 255; i++) {
+    if (pixelBrt[i] > maxPixels) {
+      maxPixels = pixelBrt[i];
+    }
+  }
+
+  for (i = 0; i < 255; i++) {
+    h = map(pixelBrt[i], 0, maxPixels, 0, height - img.height-10)
+    fill(i, i, i);
+    rect(0 + (i * (width / 255)), height, width / 255, -h);
+  }
+
+  image(img, 0, 0);
 }
+
+function draw() {
 
 function keyPressed() {
   if (key === "a") {
