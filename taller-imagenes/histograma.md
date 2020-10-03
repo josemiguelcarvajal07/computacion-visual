@@ -42,8 +42,7 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
-    var mask = createGraphics(img.width, img.height);
-    pixelDensity(1);
+    let mask = createGraphics(img.width, img.height);
 }
 
 function draw() {
@@ -122,23 +121,23 @@ function keyPressed() {
     if(key === 'a'){
         img = loadImage("../images/subnautica.jpg");
         newImage(img);
-        redraw();
+        draw();
       }if(key === 'b'){
         img = loadImage("../images/unity.jpg");
         newImage(img);
-        redraw();
+        draw();
       }if(key === 'c'){
         img = loadImage("../images/oddysey.jpg");
         newImage(img);
-        redraw();
+        draw();
       }if(key === 'd'){
         img = loadImage("../images/minecraft.jpg");
         newImage(img);
-        redraw();
+        draw();
       }if(key === 'e'){
         img = loadImage("../images/sekiro.jpg");
         newImage(img);
-        redraw();
+        draw();
       }
 }
 ```

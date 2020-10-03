@@ -18,8 +18,7 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
-    var mask = createGraphics(img.width, img.height);
-    pixelDensity(1);
+    let mask = createGraphics(img.width, img.height);
 }
 
 function draw() {
