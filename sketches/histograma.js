@@ -97,22 +97,22 @@ function keyPressed() {
     if(key === 'a'){
         img = loadImage("../images/subnautica.jpg");
         newImage(img);
-        draw();
+        redraw(5);
       }if(key === 'b'){
         img = loadImage("../images/unity.jpg");
         newImage(img);
-        draw();
+        redraw(5);
       }if(key === 'c'){
         img = loadImage("../images/oddysey.jpg");
         newImage(img);
-        draw();
+        redraw(5);
       }if(key === 'd'){
         img = loadImage("../images/minecraft.jpg");
         newImage(img);
-        draw();
+        redraw(5);
       }if(key === 'e'){
         img = loadImage("../images/sekiro.jpg");
         newImage(img);
-        draw();
+        redraw(5);
       }
 }
