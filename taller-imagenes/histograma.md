@@ -42,18 +42,14 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
-    original = createGraphics(img.width, img.height);
-    mask = createGraphics(img.width, img.height);
-    newImage(original)
+    mask = createGraphics(640, 360);
+    pixelDensity(1);
 }
 
 function draw() {
   background(0, 0, 0);
-  original.beginDraw();
-  original.image(img,0,0);
-  original.endDraw();
-  mask.beginDraw();
-  mask.background(255);
+  img.loadPixels();
+  newImage(img);
 
   if (Bhist) {
     mask.stroke(255, 0, 0, 255);
@@ -91,9 +87,9 @@ function draw() {
     }
   }
 
-  mask.endDraw();
-  image(original, 0, 0);
-  image(mask, 0, 360);
+  image(original, 0, 0, img.width, img.height);
+  image(mask, 0, 360, img.width, img.height);
+  noLoop();
 }
 
 function newImage(image) {
