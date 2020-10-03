@@ -40,9 +40,6 @@ function setup() {
       pixel = img.get(i, j);
       var loc = (i + j * img.width) * 4;
       pixelBrt[img.pixels[loc + 4]]++;
-      histR[int(red(pixel))]++;
-      histG[int(green(pixel))]++;
-      histB[int(blue(pixel))]++;
     }
   }
   
@@ -63,5 +60,3 @@ function setup() {
 }
 
 function draw() {
-
-}
