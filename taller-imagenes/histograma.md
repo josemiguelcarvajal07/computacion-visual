@@ -54,10 +54,7 @@ function setup() {
   img.loadPixels();
 
   background(255);
-  var pixelBrt = [0];
-  for (i = 0; i < 255; i++) {
-    pixelBrt[i] = 0;
-  }
+  var pixelBrt = [];
   
   for (var i = 0; i < img.width; i++) {
     for (var j = 0; j < img.height; j++) {
