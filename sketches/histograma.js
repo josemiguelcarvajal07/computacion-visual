@@ -28,39 +28,43 @@ function draw() {
     img.loadPixels();
 
     if (Bhist) {
-        mask.storke(255, 0, 0, 255);
-        for (var i = 0; i < img.width; i += 2) {
-            var which = int(map(i, 0, img.width, 0, 255));
-            var y = int(map(hist[which], 0, histRMax, img.height, 0));
-            mask.line(i, img.height, i, y);
-        }
+      mask.background(100);
+      mask.stroke(255, 0, 0, 255);
+      for (var i = 0; i < img.width; i += 2) {
+        var which = int(map(i, 0, img.width, 0, 255));
+        var y = int(map(hist[which], 0, histRMax, img.height, 0));
+        mask.line(i, img.height, i, y);
+      }
     }
 
     if (BhistB) {
-        mask.storke(0, 0, 255, 100);
-        for (var i = 0; i < img.width; i += 2) {
-            var which = int(map(i, 0, img.width, 0, 255));
-            var y = int(map(histB[which], 0, histBMax, img.height, 0));
-            mask.line(i, img.height, i, y);
-        }
+      mask.background(100);
+      mask.stroke(0, 0, 255, 100);
+      for (var i = 0; i < img.width; i += 2) {
+        var which = int(map(i, 0, img.width, 0, 255));
+        var y = int(map(histB[which], 0, histBMax, img.height, 0));
+        mask.line(i, img.height, i, y);
+      }
     }
 
     if (BhistG) {
-        mask.storke(0, 255, 0, 100);
-        for (var i = 0; i < img.width; i += 2) {
-            var which = int(map(i, 0, img.width, 0, 255));
-            var y = int(map(histG[which], 0, histGMax, img.height, 0));
-            mask.line(i, img.height, i, y);
-        }
+      mask.background(100);
+      mask.stroke(0, 255, 0, 100);
+      for (var i = 0; i < img.width; i += 2) {
+        var which = int(map(i, 0, img.width, 0, 255));
+        var y = int(map(histG[which], 0, histGMax, img.height, 0));
+        mask.line(i, img.height, i, y);
+      }
     }
 
     if (BhistR) {
-        mask.storke(0, 255, 0, 100);
-        for (var i = 0; i < img.width; i += 2) {
-            var which = int(map(i, 0, img.width, 0, 255));
-            var y = int(map(histG[which], 0, histGMax, img.height, 0));
-            mask.line(i, img.height, i, y);
-        }
+      mask.background(100);
+      mask.stroke(0, 255, 0, 100);
+      for (var i = 0; i < img.width; i += 2) {
+        var which = int(map(i, 0, img.width, 0, 255));
+        var y = int(map(histG[which], 0, histGMax, img.height, 0));
+        mask.line(i, img.height, i, y);
+      }
     }
 }
 
