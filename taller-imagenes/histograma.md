@@ -42,7 +42,7 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
-    mask = createGraphics(img.width, img.height);
+    var mask = createGraphics(img.width, img.height);
     pixelDensity(1);
 }
 
