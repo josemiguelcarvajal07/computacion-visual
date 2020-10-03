@@ -91,9 +91,10 @@ function draw() {
         mask.line(i, img.height, i, y);
       }
     }
-    
-    mask.updatePixels();
-    image(mask, 0, 0, mask.width, mask.height);
+
+    mask.endDraw();
+    image(original, 0, 0);
+    image(mask, 0, 360);
 }
 
 function newImage(image) {
@@ -116,11 +117,9 @@ function newImage(image) {
     histGMax = max(histG);
     histBMax = max(histB);
 
-    mask.updatePixels();
-    image(mask, 0, 0, mask.width, mask.height);
-  }
+}
 
-/*function keyPressed() {
+function keyPressed() {
     if(key === 'a'){
         img = loadImage("../images/subnautica.jpg");
         newImage(img);
@@ -143,10 +142,6 @@ function newImage(image) {
         redraw(5);
       }
 
-}*/
-
-function mousePressed() {
-  redraw(5); // press mouse to blur image even more!
 }
 ```
 <div class="histograma" id='histograma'></div>
