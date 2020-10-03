@@ -17,8 +17,8 @@ function preload() {
 }
 
 function setup() {
-  w = img.width;
-  h = img.height;
+  width = img.width;
+  height = img.height;
 
   h1 = createElement("h1", "Levels Histogram");
   h1.style("z-index", 50);
