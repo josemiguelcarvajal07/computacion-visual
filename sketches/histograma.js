@@ -26,9 +26,6 @@ function draw() {
     background(0, 0, 0);
 
     img.loadPixels();
-    img.updatePixels();
-    image(img, 0, 0, img.width, img.height);
-    noLoop();
 
     if (Bhist) {
         mask.storke(255, 0, 0, 255);
@@ -65,11 +62,6 @@ function draw() {
             mask.line(i, img.height, i, y);
         }
     }
-
-    img.loadPixels();
-    img.updatePixels();
-    image(img, 0, 0, img.width, img.height);
-    noLoop();
 }
 
 function newImage(image) {
@@ -91,23 +83,33 @@ function newImage(image) {
     histRMax = max(histR);
     histGMax = max(histG);
     histBMax = max(histB);
+
+    img.loadPixels();
+    img.updatePixels();
+    image(img, 0, 0, img.width, img.height);
+    noLoop();
   }
 
 function keyPressed() {
-    if(key == 'a'){
+    if(value === 'a'){
         img = loadImage("subnautica.jpg");
         newImage(img);
-      }if(key == 'b'){
+        redraw();
+      }if(value === 'b'){
         img = loadImage("unity.jpg");
         newImage(img);
-      }if(key == 'c'){
+        redraw();
+      }if(value === 'c'){
         img = loadImage("oddysey.jpg");
         newImage(img);
-      }if(key == 'd'){
+        redraw();
+      }if(value === 'd'){
         img = loadImage("minecraft.jpg");
         newImage(img);
-      }if(key == 'e'){
+        redraw();
+      }if(value === 'e'){
         img = loadImage("sekiro.jpg");
         newImage(img);
+        redraw();
       }
 }
