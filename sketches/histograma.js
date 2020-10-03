@@ -12,7 +12,7 @@ let histRMax
 let histBMax
 
 function preload() {
-    img = loadImage('../images/Tiger.jpg');
+    img = loadImage('../images/sekiro.jpg');
 }
 
 function setup() {
