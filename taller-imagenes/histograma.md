@@ -91,6 +91,9 @@ function draw() {
         mask.line(i, img.height, i, y);
       }
     }
+    
+    mask.updatePixels();
+    image(mask, 0, 0, mask.width, mask.height);
 }
 
 function newImage(image) {
@@ -113,7 +116,6 @@ function newImage(image) {
     histGMax = max(histG);
     histBMax = max(histB);
 
-    mask.loadPixels();
     mask.updatePixels();
     image(mask, 0, 0, mask.width, mask.height);
   }
