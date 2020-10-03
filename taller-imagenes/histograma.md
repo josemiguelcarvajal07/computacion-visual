@@ -115,23 +115,23 @@ function newImage(image) {
   }
 
 function keyPressed() {
-    if(value === 'a'){
+    if(key === 'a'){
         img = loadImage("subnautica.jpg");
         newImage(img);
         redraw();
-      }if(value === 'b'){
+      }if(key === 'b'){
         img = loadImage("unity.jpg");
         newImage(img);
         redraw();
-      }if(value === 'c'){
+      }if(key === 'c'){
         img = loadImage("oddysey.jpg");
         newImage(img);
         redraw();
-      }if(value === 'd'){
+      }if(key === 'd'){
         img = loadImage("minecraft.jpg");
         newImage(img);
         redraw();
-      }if(value === 'e'){
+      }if(key === 'e'){
         img = loadImage("sekiro.jpg");
         newImage(img);
         redraw();
