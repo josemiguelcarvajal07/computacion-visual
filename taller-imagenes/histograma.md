@@ -62,12 +62,15 @@ function setup() {
   img.loadPixels();
 
   background(255);
-  var pixelBrt = [];
+  var pixelBrt = [0];
+  for (i = 0; i < 255; i++) {
+    pixelBrt[i] = 0;
+  }
   
   for (var i = 0; i < img.width; i++) {
     for (var j = 0; j < img.height; j++) {
       pixel = img.get(i, j);
-      var loc = (x + y * img.width) * 4;
+      var loc = (i + j * img.width) * 4;
       pixelBrt[img.pixels[loc + 4]]++;
       histR[int(red(pixel))]++;
       histG[int(green(pixel))]++;
