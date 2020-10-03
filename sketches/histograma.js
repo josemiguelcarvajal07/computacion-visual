@@ -31,7 +31,7 @@ function draw() {
     mask.stroke(255, 0, 0, 255);
     for (var i = 0; i < img.width; i += 2) {
       var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(hist[which], 0, histRMax, img.height, 0));
+      var y = int(map(hist[which], 0, histMax, img.height, 0));
       mask.line(i, img.height, i, y);
     }
 }
@@ -58,7 +58,7 @@ function draw() {
     mask.stroke(0, 255, 0, 100);
     for (var i = 0; i < img.width; i += 2) {
       var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(histG[which], 0, histGMax, img.height, 0));
+      var y = int(map(histG[which], 0, histRMax, img.height, 0));
       mask.line(i, img.height, i, y);
     }
   }
