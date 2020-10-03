@@ -24,99 +24,112 @@ El código utilizado para realizar lo descrito anteriormente y obtener el histog
 
 ```js
 let img;
-let mask;
-let Bhist = false;
 let BhistR = true;
 let BhistG = false;
 let BhistB = false;
-let hist = [];
-let histR = [];
-let histG = [];
-let histB = [];
-let histGMax;
-let histRMax;
-let histBMax;
+let histR = [0];
+let histG = [0];
+let histB = [0];
+var histGMax = 0;
+var histRMax = 0;
+var histBMax = 0;
 
 function preload() {
   img = loadImage('../images/sekiro.jpg');
 }
 
 function setup() {
-  width = img.width;
-  height = img.height;
+  width = 580;
+  height = 600;
 
-  h1 = createElement("h1", "Levels Histogram");
-  h1.style("z-index", 50);
-  h1.style("x-index", 150);
-  h1.style("x-index", width / 2);
+  createCanvas(width, height);
+}
 
-  if (Bhist) {
-    mask.stroke(255, 0, 0, 255);
-    for (var i = 0; i < img.width; i += 2) {
-      var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(hist[which], 0, histMax, img.height, 0));
-      mask.line(i, img.height, i, y);
-    }
-  }
-
+function draw() {
   img.loadPixels();
 
   background(255);
-  var pixelBrt = [0];
   for (i = 0; i < 255; i++) {
-    pixelBrt[i] = 0;
+    histR[i] = 0;
+    histB[i] = 0;
+    histG[i] = 0;
   }
   
   for (var i = 0; i < img.width; i++) {
     for (var j = 0; j < img.height; j++) {
       pixel = img.get(i, j);
-      var loc = (i + j * img.width) * 4;
-      pixelBrt[img.pixels[loc + 4]]++;
+      histR[int(red(pixel))]++;
+      histB[int(blue(pixel))]++;
+      histG[int(green(pixel))]++;
     }
   }
   
-  var maxPixels = 0;
   for (i = 0; i < 255; i++) {
-    if (pixelBrt[i] > maxPixels) {
-      maxPixels = pixelBrt[i];
+    if (histR[i] > histRMax) {
+      histRMax = histR[i];
+    }
+    if (histB[i] > histBMax) {
+      histBMax = histB[i];
+    }
+    if (histG[i] > histGMax) {
+      histGMax = histG[i];
+    }
+  }
+  if(BhistG){
+    for (i = 0; i < 255; i++) {
+      h = map(histG[i], 0, histGMax, 0, height - img.height-10)
+      fill(0, 255, 0);
+      rect(0 + (i * (width / 255)), height, width / 255, -h);
+    }
+  }
+  if(BhistR){
+    for (i = 0; i < 255; i++) {
+      h = map(histR[i], 0, histRMax, 0, height - img.height-10)
+      fill(255, 0, 0);
+      rect(0 + (i * (width / 255)), height, width / 255, -h);
     }
   }
 
-  for (i = 0; i < 255; i++) {
-    h = map(pixelBrt[i], 0, maxPixels, 0, height - img.height-10)
-    fill(i, i, i);
-    rect(0 + (i * (width / 255)), height, width / 255, -h);
+  if(BhistB){
+    for (i = 0; i < 255; i++) {
+      h = map(histB[i], 0, histBMax, 0, height - img.height-10)
+      fill(0, 0, 255);
+      rect(0 + (i * (width / 255)), height, width / 255, -h);
+    }
   }
 
   image(img, 0, 0);
+  loop(); 
 }
 
-function draw() {
-
 function keyPressed() {
+  if(key === '1'){
+    BhistR = !BhistR;
+  }
+  if(key === '2'){
+    BhistB = !BhistB;
+  }
+  if(key === '3'){
+    BhistG = !BhistG;
+  }
   if (key === "a") {
     img = loadImage("../images/subnautica.jpg");
-    newImage(img);
     redraw();
   }
   if (key === "b") {
     img = loadImage("../images/unity.jpg");
-    newImage(img);
     redraw();
   }
   if (key === "c") {
     img = loadImage("../images/oddysey.jpg");
-    newImage(img);
     redraw();
   }
   if (key === "d") {
     img = loadImage("../images/minecraft.jpg");
-    newImage(img);
     redraw();
   }
   if (key === "e") {
     img = loadImage("../images/sekiro.jpg");
-    newImage(img);
     redraw();
   }
 }
