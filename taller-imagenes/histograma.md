@@ -111,7 +111,7 @@ function newImage(image) {
     img.loadPixels();
     img.updatePixels();
     image(img, 0, 0, img.width, img.height);
-    noLoop();
+    loop()
   }
 
 function keyPressed() {
