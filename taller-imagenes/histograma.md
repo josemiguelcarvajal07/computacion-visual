@@ -43,6 +43,7 @@ function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
     let mask = createGraphics(img.width, img.height);
+    noloop();
 }
 
 function draw() {
