@@ -35,7 +35,7 @@ function setup() {
   for (var i = 0; i < img.width; i++) {
     for (var j = 0; j < img.height; j++) {
       pixel = img.get(i, j);
-      var loc = (x + y * img.width) * 4;
+      var loc = (i + j * img.width) * 4;
       pixelBrt[img.pixels[loc + 4]]++;
       histR[int(red(pixel))]++;
       histG[int(green(pixel))]++;
