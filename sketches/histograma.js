@@ -13,14 +13,14 @@ let histRMax;
 let histBMax;
 
 function preload() {
-    img = loadImage('../images/sekiro.jpg');
+  img = loadImage("../images/sekiro.jpg");
 }
 
 function setup() {
-    var myCanvas = createCanvas(img.width, img.height);
-    myCanvas.parent('histograma');
-    mask = createGraphics(640, 360);
-    pixelDensity(1);
+  var myCanvas = createCanvas(img.width, img.height);
+  myCanvas.parent("histograma");
+  mask = createGraphics(640, 360);
+  pixelDensity(1);
 }
 
 function draw() {
@@ -35,7 +35,7 @@ function draw() {
       var y = int(map(hist[which], 0, histMax, img.height, 0));
       mask.line(i, img.height, i, y);
     }
-}
+  }
 
   if (BhistB) {
     mask.stroke(0, 0, 255, 100);
@@ -90,23 +90,27 @@ function newImage(image) {
 }
 
 function keyPressed() {
-  if(key === 'a'){
+  if (key === "a") {
     img = loadImage("../images/subnautica.jpg");
     newImage(img);
     redraw();
-  }if(key === 'b'){
+  }
+  if (key === "b") {
     img = loadImage("../images/unity.jpg");
     newImage(img);
     redraw();
-  }if(key === 'c'){
+  }
+  if (key === "c") {
     img = loadImage("../images/oddysey.jpg");
     newImage(img);
     redraw();
-  }if(key === 'd'){
+  }
+  if (key === "d") {
     img = loadImage("../images/minecraft.jpg");
     newImage(img);
     redraw();
-  }if(key === 'e'){
+  }
+  if (key === "e") {
     img = loadImage("../images/sekiro.jpg");
     newImage(img);
     redraw();

@@ -4,8 +4,9 @@ title: Histograma
 permalink: /histograma/
 custom_css: style.css
 custom_js:
-- histograma.js
+  - histograma.js
 ---
+
 A lo largo de esta página, vamos a documentar el estudio realizado para extraer el histograma de una imagen usango p5.js, las imagenes a analizar se pueden ir camiando mediante las letras:
 
 <img src="../images/sekiro.jpg" alt="hisgrama" class="center-image">
@@ -16,7 +17,7 @@ A lo largo de esta página, vamos a documentar el estudio realizado para extraer
 - Letra "d": para mostrar la imagen de Minecraft
 - Letra "e": para mostrar la imagen de Sekiro: Shadows Die Twice
 
-El metodo utilizado para realizar el análisis es iterar por cada uno de los pixeles en la imagen y guardar sus propiedades en arreglos de 256 posiciones. Cada elemento de estos nos indica cuántos pixeles tienen el nivel de brillo, 
+El metodo utilizado para realizar el análisis es iterar por cada uno de los pixeles en la imagen y guardar sus propiedades en arreglos de 256 posiciones. Cada elemento de estos nos indica cuántos pixeles tienen el nivel de brillo,
 rojo, verde o azul igual al valor de la posición del arrelgo en la cual se encuentra. Cada valor de los arreglos se grafica en el histograma utilizando el método .line()
 
 El código utilizado para realizar lo descrito anteriormente y obtener el histograma de la imagen seleccionada es el siguente:
@@ -37,14 +38,14 @@ let histRMax;
 let histBMax;
 
 function preload() {
-    img = loadImage('../images/sekiro.jpg');
+  img = loadImage("../images/sekiro.jpg");
 }
 
 function setup() {
-    var myCanvas = createCanvas(img.width, img.height);
-    myCanvas.parent('histograma');
-    mask = createGraphics(640, 360);
-    pixelDensity(1);
+  var myCanvas = createCanvas(img.width, img.height);
+  myCanvas.parent("histograma");
+  mask = createGraphics(640, 360);
+  pixelDensity(1);
 }
 
 function draw() {
@@ -59,7 +60,7 @@ function draw() {
       var y = int(map(hist[which], 0, histMax, img.height, 0));
       mask.line(i, img.height, i, y);
     }
-}
+  }
 
   if (BhistB) {
     mask.stroke(0, 0, 255, 100);
@@ -114,27 +115,32 @@ function newImage(image) {
 }
 
 function keyPressed() {
-  if(key === 'a'){
+  if (key === "a") {
     img = loadImage("../images/subnautica.jpg");
     newImage(img);
     redraw();
-  }if(key === 'b'){
+  }
+  if (key === "b") {
     img = loadImage("../images/unity.jpg");
     newImage(img);
     redraw();
-  }if(key === 'c'){
+  }
+  if (key === "c") {
     img = loadImage("../images/oddysey.jpg");
     newImage(img);
     redraw();
-  }if(key === 'd'){
+  }
+  if (key === "d") {
     img = loadImage("../images/minecraft.jpg");
     newImage(img);
     redraw();
-  }if(key === 'e'){
+  }
+  if (key === "e") {
     img = loadImage("../images/sekiro.jpg");
     newImage(img);
     redraw();
   }
 }
 ```
+
 <div class="histograma" id='histograma'></div>
