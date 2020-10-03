@@ -63,8 +63,7 @@ function draw() {
       mask.line(i, img.height, i, y);
     }
   }
-
-  image(original, 0, 0, img.width, img.height);
+  
   image(mask, 0, 360, img.width, img.height);
 }
 
