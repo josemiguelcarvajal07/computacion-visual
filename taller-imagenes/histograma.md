@@ -59,7 +59,7 @@ function setup() {
   for (var i = 0; i < img.width; i++) {
     for (var j = 0; j < img.height; j++) {
       pixel = img.get(i, j);
-      pixelBrt[int(brightness(pixel))]++;
+      pixelBrt[brightness(pixel)]++;
       histR[int(red(pixel))]++;
       histG[int(green(pixel))]++;
       histB[int(blue(pixel))]++;
