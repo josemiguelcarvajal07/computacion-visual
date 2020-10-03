@@ -44,7 +44,6 @@ function setup() {
 function draw() {
   background(0, 0, 0);
   img.loadPixels();
-  newImage(img);
 
   if (Bhist) {
     mask.stroke(255, 0, 0, 255);
