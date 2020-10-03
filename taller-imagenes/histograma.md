@@ -23,6 +23,7 @@ El código utilizado para realizar lo descrito anteriormente y obtener el histog
 
 ```js
 let img;
+let mask;
 let Bhist = true;
 let BhistR = true;
 let BhistG = true;
@@ -89,7 +90,6 @@ function draw() {
 
   image(original, 0, 0, img.width, img.height);
   image(mask, 0, 360, img.width, img.height);
-  noLoop();
 }
 
 function newImage(image) {
