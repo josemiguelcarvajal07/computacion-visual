@@ -42,15 +42,17 @@ function preload() {
 function setup() {
     var myCanvas = createCanvas(img.width, img.height);
     myCanvas.parent('histograma');
-    let mask = createGraphics(img.width, img.height);
-    noloop();
+    original = createGraphics(img.width, img.height);
+    mask = createGraphics(img.width, img.height);
+    newImage(original)
 }
 
 function draw() {
-    background(0, 0, 0);
-
-    img.loadPixels();
-    mask.loadPixels()
+    original.beginDraw();
+    original.image(img,0,0);
+    original.endDraw();
+    mask.beginDraw();
+    mask.background(255);
 
     if (Bhist) {
       mask.background(100);
@@ -98,10 +100,10 @@ function draw() {
 }
 
 function newImage(image) {
-    let hist = [256];
-    let histR = [256];
-    let histG = [256];
-    let histB = [256];
+    hist = [256];
+    histR = [256];
+    histG = [256];
+    histB = [256];
   
     for (var i = 0; i < image.width; i++) {
       for (var j = 0; j < image.height; j++) {
@@ -123,25 +125,24 @@ function keyPressed() {
     if(key === 'a'){
         img = loadImage("../images/subnautica.jpg");
         newImage(img);
-        redraw(5);
+        redraw();
       }if(key === 'b'){
         img = loadImage("../images/unity.jpg");
         newImage(img);
-        redraw(5);
+        redraw();
       }if(key === 'c'){
         img = loadImage("../images/oddysey.jpg");
         newImage(img);
-        redraw(5);
+        redraw();
       }if(key === 'd'){
         img = loadImage("../images/minecraft.jpg");
         newImage(img);
-        redraw(5);
+        redraw();
       }if(key === 'e'){
         img = loadImage("../images/sekiro.jpg");
         newImage(img);
-        redraw(5);
+        redraw();
       }
-
 }
 ```
 <div class="histograma" id='histograma'></div>
