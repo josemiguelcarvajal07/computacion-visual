@@ -8,8 +8,8 @@ let histR = [];
 let histG = [];
 let histB = [];
 let histGMax;
-let histRMax
-let histBMax
+let histRMax;
+let histBMax;
 
 function preload() {
     img = loadImage('../images/sekiro.jpg');
@@ -58,7 +58,7 @@ function draw() {
     mask.stroke(0, 255, 0, 100);
     for (var i = 0; i < img.width; i += 2) {
       var which = int(map(i, 0, img.width, 0, 255));
-      var y = int(map(histG[which], 0, histRMax, img.height, 0));
+      var y = int(map(histR[which], 0, histRMax, img.height, 0));
       mask.line(i, img.height, i, y);
     }
   }
