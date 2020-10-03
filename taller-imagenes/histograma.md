@@ -24,10 +24,10 @@ El código utilizado para realizar lo descrito anteriormente y obtener el histog
 ```js
 let img;
 let mask;
-let Bhist = true;
+let Bhist = false;
 let BhistR = true;
-let BhistG = true;
-let BhistB = true;
+let BhistG = false;
+let BhistB = false;
 let hist = [];
 let histR = [];
 let histG = [];
