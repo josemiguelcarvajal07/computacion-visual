@@ -41,8 +41,8 @@ function preload() {
 }
 
 function setup() {
-  width = 580;
-  height = 600;
+  w = img.width;
+  h = img.height;
 
   h1 = createElement("h1", "Levels Histogram");
   h1.style("z-index", 50);
@@ -54,16 +54,15 @@ function setup() {
   img.loadPixels();
 
   background(255);
-  var pixelBrt = [0];
-  for (i = 0; i < 255; i++) {
-    pixelBrt[i] = 0;
-  }
+  var pixelBrt = [];
   
-  for (var x = 0; x < img.width; x++) {
-    for (var y = 0; y < img.height; y++) {
-      var loc = (x + y * img.width) * 4;
-      pixelBrt[img.pixels[loc + 4]]++;
-
+  for (var i = 0; i < img.width; i++) {
+    for (var j = 0; j < img.height; j++) {
+      pixel = img.get(i, j);
+      pixelBrt[int(brightness(pixel))]++;
+      histR[int(red(pixel))]++;
+      histG[int(green(pixel))]++;
+      histB[int(blue(pixel))]++;
     }
   }
   

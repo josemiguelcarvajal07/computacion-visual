@@ -32,9 +32,9 @@ function setup() {
   background(255);
   var pixelBrt = [];
   
-  for (var i = 0; i < image.width; i++) {
-    for (var j = 0; j < image.height; j++) {
-      pixel = image.get(i, j);
+  for (var i = 0; i < img.width; i++) {
+    for (var j = 0; j < img.height; j++) {
+      pixel = img.get(i, j);
       pixelBrt[int(brightness(pixel))]++;
       histR[int(red(pixel))]++;
       histG[int(green(pixel))]++;
