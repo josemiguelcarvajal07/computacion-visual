@@ -118,7 +118,7 @@ function newImage(image) {
     image(mask, 0, 0, mask.width, mask.height);
   }
 
-function keyPressed() {
+/*function keyPressed() {
     if(key === 'a'){
         img = loadImage("../images/subnautica.jpg");
         newImage(img);
@@ -140,6 +140,11 @@ function keyPressed() {
         newImage(img);
         redraw(5);
       }
+
+}*/
+
+function mousePressed() {
+  redraw(5); // press mouse to blur image even more!
 }
 ```
 <div class="histograma" id='histograma'></div>
