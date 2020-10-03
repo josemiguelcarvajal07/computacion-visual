@@ -36,7 +36,7 @@ let histRMax
 let histBMax
 
 function preload() {
-    img = loadImage('../images/Tiger.jpg');
+    img = loadImage('../images/sekiro.jpg');
 }
 
 function setup() {
@@ -136,12 +136,4 @@ function keyPressed() {
       }
 }
 ```
-Finalmente como resultados obtenemos el siguiente resultado.
-
-<div class="center-text">
-
-<b>Si quieres aumentar el efecto de la convolución haz click en la imagen.</b> 
-
-</div>
-
-<div class="sketch-matrix" id='outline'></div>
+<div class="histograma" id='histograma'></div>
