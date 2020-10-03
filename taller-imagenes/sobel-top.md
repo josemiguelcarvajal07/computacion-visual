@@ -1,99 +1,95 @@
 ---
 layout: sample
-title: Sobel Top
-permalink: /sobel-top/
+title: Matríz de convolución Sobel Top
+permalink: /sobel-top-matrix/
 custom_css: style.css
 custom_js:
-- outline.js
+  - sobel-top.js
 ---
-Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolucion Outline, la cual esta representada de esta manera:
 
-<img src="../images/Outline-matrix.svg" alt="Outline Matrix" class="center-matrix">
+Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolución Sobel Top, la cual esta representada de esta manera:
+
+<img src="../images/Sobel-Top-Matrix.png" alt="Sobel-Top Matrix" class="center-matrix">
 
 Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen de un Tigre.
 
 <img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
 
-y ahora procedemos a transformar esta imagen con la matriz de convolucion usando el siguiente script:
+y ahora procedemos a transformar esta imagen con la matriz de convolución usando el siguiente script:
 
 ```js
-var img;
+var srcimg, dstimg;
 
 function preload() {
-    img = loadImage('../images/Tiger.jpg');
+  srcimg = loadImage("../images/Tiger.jpg");
 }
 
 function setup() {
-    var myCanvas = createCanvas(img.width, img.height);
-    myCanvas.parent('sobel-top');
-    pixelDensity(1);
+  var myCanvas = createCanvas(srcimg.width, srcimg.height);
+  myCanvas.parent("sobel-top");
+  pixelDensity(1);
+  dstimg = createImage(srcimg.width, srcimg.height);
 }
 
 function draw() {
-    background(0, 0, 0);
+  processImage(srcimg, dstimg);
+  image(dstimg, 0, 0, dstimg.width, dstimg.height);
+}
 
-    var k1 = [[0, 0, 0],
-    [0, 1, 0],
-    [0, 0, 0]];
+function processImage(_srcimg, _dstimg) {
+  var k1 = [
+    [1, 2, 1],
+    [0, 0, 0],
+    [-1, -2, -1],
+  ];
 
-    img.loadPixels();
+  _srcimg.loadPixels();
+  _dstimg.loadPixels();
 
-    var w = img.width;
-    var h = img.height;
-
+  var w = _srcimg.width;
+  var h = _srcimg.height;
+  for (var x = 0; x < w; x++) {
     for (var y = 0; y < h; y++) {
-        for (var x = 0; x < w; x++) {
-            c = convolution(x, y, k1, img);
-            var loc = x + y * w;
-            img.pixels[loc] = c
-        }
-    }
+      var ul = (((x - 1 + w) % w) + w * ((y - 1 + h) % h)) * 4;
+      var uc = (((x - 0 + w) % w) + w * ((y - 1 + h) % h)) * 4;
+      var ur = (((x + 1 + w) % w) + w * ((y - 1 + h) % h)) * 4;
+      var ml = (((x - 1 + w) % w) + w * ((y + 0 + h) % h)) * 4;
+      var mc = (((x - 0 + w) % w) + w * ((y + 0 + h) % h)) * 4;
+      var mr = (((x + 1 + w) % w) + w * ((y + 0 + h) % h)) * 4;
+      var ll = (((x - 1 + w) % w) + w * ((y + 1 + h) % h)) * 4;
+      var lc = (((x - 0 + w) % w) + w * ((y + 1 + h) % h)) * 4;
+      var lr = (((x + 1 + w) % w) + w * ((y + 1 + h) % h)) * 4;
 
-    img.updatePixels();
-    image(img, 0, 0, img.width, img.height);
-    noLoop();
-}
+      var p0 = _srcimg.pixels[ul + 1] * k1[0][0];
+      var p1 = _srcimg.pixels[uc + 1] * k1[0][1];
+      var p2 = _srcimg.pixels[ur + 1] * k1[0][2];
+      var p3 = _srcimg.pixels[ml + 1] * k1[1][0];
+      var p4 = _srcimg.pixels[mc + 1] * k1[1][1];
+      var p5 = _srcimg.pixels[mr + 1] * k1[1][2];
+      var p6 = _srcimg.pixels[ll + 1] * k1[2][0];
+      var p7 = _srcimg.pixels[lc + 1] * k1[2][1];
+      var p8 = _srcimg.pixels[lr + 1] * k1[2][2];
+      var r1 = p0 + p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8;
 
-function keypPressed() {
-    matrixsize = 3;
-    if (key == 'a') {
-        k1 = [[-1, -1, -1],
-        [-1, 8, -1],
-        [-1, -1, -1]];
-    }
-}
+      var result = r1;
 
-function convolution(x, y, k1, matrixsize, mask) {
-    var rtotal = 0.0;
-    var gtotal = 0.0;
-    var btotal = 0.0;
-    for (var i = 0; i < matrixsize; i++) {
-        for (var j = 0; j < matrixsize; j++) {
-            var xloc = x + i;
-            var yloc = y + j;
-            var loc = xloc + mask.width * yloc;
-            loc = constrain(loc, 0, mask.pixels.length - 1);
-            rtotal += (red(mask.pixels[loc])) * k1[i][j];
-            gtotal += (green(mask.pixels[loc])) * k1[i][j];
-            btotal += (blue(mask.pixels[loc])) * k1[i][j];
-        }
+      _dstimg.pixels[mc] = result;
+      _dstimg.pixels[mc + 1] = result;
+      _dstimg.pixels[mc + 2] = result;
+      _dstimg.pixels[mc + 3] = 255;
     }
-    rtotal = constrain(rtotal, 0, 256);
-    gtotal = constrain(gtotal, 0, 256);
-    btotal = constrain(btotal, 0, 256);
-    if (!inv) {
-        return color(rtotal, gtotal, btotal);
-    } else {
-        return color(255 - rtotal, 255 - gtotal, 255 - btotal)
-    }
+  }
+
+  _dstimg.updatePixels();
 }
 ```
-Finalmente como resultado obtenemos la imagen transfromada usando la matriz de Outline.
+
+Finalmente como resultado obtenemos la imagen transfromada usando la matriz de Sobel Top.
 
 <div class="center-text">
 
-<b>Si quieres aumentar el efecto de la convolución haz click en la imagen.</b> 
+<b>Si quieres aumentar el efecto de la convolución haz click en la imagen.</b>
 
 </div>
 
-<div class="sketch-matrix" id='outline'></div>
+<div class="sketch-matrix" id='sobel-top'></div>

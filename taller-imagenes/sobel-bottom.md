@@ -1,3 +1,23 @@
+---
+layout: sample
+title: Matríz de convolución Sobel Bottom
+permalink: /sobel-bottom-matrix/
+custom_css: style.css
+custom_js:
+  - sobel-bottom.js
+---
+
+Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolución Sobel Bottom, la cual esta representada de esta manera:
+
+<img src="../images/Sobel-Bottom-Matrix.png" alt="Sobel-Bottom Matrix" class="center-matrix">
+
+Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen de un Tigre.
+
+<img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
+
+y ahora procedemos a transformar esta imagen con la matriz de convolución usando el siguiente script:
+
+```js
 var srcimg, dstimg;
 
 function preload() {
@@ -6,7 +26,7 @@ function preload() {
 
 function setup() {
   var myCanvas = createCanvas(srcimg.width, srcimg.height);
-  myCanvas.parent("sobel-top");
+  myCanvas.parent("sobel-bottom");
   pixelDensity(1);
   dstimg = createImage(srcimg.width, srcimg.height);
 }
@@ -18,9 +38,9 @@ function draw() {
 
 function processImage(_srcimg, _dstimg) {
   var k1 = [
-    [1, 2, 1],
-    [0, 0, 0],
     [-1, -2, -1],
+    [0, 0, 0],
+    [1, 2, 1],
   ];
 
   _srcimg.loadPixels();
@@ -62,3 +82,7 @@ function processImage(_srcimg, _dstimg) {
 
   _dstimg.updatePixels();
 }
+```
+Finalmente como resultado obtenemos la imagen transfromada usando la matriz de Sobel Bottom.
+
+<div class="sketch-matrix" id='sobel-bottom'></div>

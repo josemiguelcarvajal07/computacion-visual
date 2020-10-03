@@ -6,7 +6,7 @@ function preload() {
 
 function setup() {
   var myCanvas = createCanvas(srcimg.width, srcimg.height);
-  myCanvas.parent("sobel-top");
+  myCanvas.parent("emboss");
   pixelDensity(1);
   dstimg = createImage(srcimg.width, srcimg.height);
 }
@@ -18,9 +18,9 @@ function draw() {
 
 function processImage(_srcimg, _dstimg) {
   var k1 = [
-    [1, 2, 1],
-    [0, 0, 0],
-    [-1, -2, -1],
+    [-2, -1, 0],
+    [-1, 1, 1],
+    [0, 1, 2],
   ];
 
   _srcimg.loadPixels();

@@ -6,7 +6,7 @@ custom_css: style.css
 custom_js:
 - box-blur.js
 ---
-Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolucion Box-Blur, la cual esta representada de esta manera:
+Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolución Box-Blur, la cual esta representada de esta manera:
 
 <img src="../images/Box-blur-matrix.svg" alt="Box-blur Matrix" class="center-matrix">
 
@@ -14,7 +14,7 @@ Esta es la imagen que vamos a transformar, como podemos observar esta es una ima
 
 <img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
 
-y ahora procedemos a transformar esta imagen con la matriz de convolucion usando el siguiente script:
+y ahora procedemos a transformar esta imagen con la matriz de convolución usando el siguiente script:
 
 ```js
 var img;

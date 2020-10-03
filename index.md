@@ -47,13 +47,19 @@ custom_js:
 
   - [Matríz de convolución Gaussian-Blur.](https://sfdelgadop.github.io/computacion-visual/gaussian-blur-matrix/)
 
-  - [Matríz de convolución Sharpen.(Mejorar)](https://sfdelgadop.github.io/computacion-visual/sharpen-matrix/)
+  - [Matríz de convolución Sharpen.](https://sfdelgadop.github.io/computacion-visual/sharpen-matrix/)
 
-  - [Matríz de convolución Outline. (Mejorar)](https://sfdelgadop.github.io/computacion-visual/outline-matrix/)
+  - [Matríz de convolución Outline.](https://sfdelgadop.github.io/computacion-visual/outline-matrix/)
 
-  - [Sobel Top](https://sfdelgadop.github.io/computacion-visual/sobel-top/)
+  - [Matríz de convolución Sobel Top.](https://sfdelgadop.github.io/computacion-visual/sobel-top-matrix/)
+
+  - [Matríz de convolución Sobel Bottom.](https://sfdelgadop.github.io/computacion-visual/sobel-bottom-matrix/)
+
+  - [Matríz de convolución Sobel Right.](https://sfdelgadop.github.io/computacion-visual/sobel-right-matrix/)
+
+  - [Matríz de convolución Sobel Left.](https://sfdelgadop.github.io/computacion-visual/sobel-left-matrix/)
   
-  - TODO Sobel(top, bottom, etc.)....
+  - [Matríz de convolución Emboss.](https://sfdelgadop.github.io/computacion-visual/emboss-matrix/)
 
 - Despliegue del histograma y segmentación.
 

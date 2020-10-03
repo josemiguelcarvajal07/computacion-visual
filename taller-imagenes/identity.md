@@ -6,7 +6,7 @@ custom_css: style.css
 custom_js:
 - identity.js
 ---
-Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolucion Identity, la cual esta representada de esta manera:
+Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolución Identity, la cual esta representada de esta manera:
 
 <img src="../images/Identity-matrix.svg" alt="Identity Matrix" class="center-matrix">
 
@@ -14,7 +14,7 @@ Esta es la imagen que vamos a transformar, como podemos observar esta es una ima
 
 <img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
 
-En realidad esta matriz de convolucion deja la imagen intacta  pero sin embargo quisimos implementarla, ahora procedemos a transformar esta imagen con la matriz de convolucion usando el siguiente script:
+En realidad esta matriz de convolución deja la imagen intacta  pero sin embargo quisimos implementarla, ahora procedemos a transformar esta imagen con la matriz de convolución usando el siguiente script:
 
 ```js
 var img;
