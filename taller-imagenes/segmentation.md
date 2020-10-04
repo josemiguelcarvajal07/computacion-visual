@@ -4,6 +4,7 @@ title: segmentación de video en tiempo real
 permalink: /segmentation/
 custom_css: style.css
 custom_js:
+  - ml5.js
   - segmentation.js
 ---
 
