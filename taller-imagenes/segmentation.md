@@ -1,10 +1,10 @@
 ---
 layout: sample
-title: Matríz de convolución Emboss
+title: segmentación de video en tiempo real
 permalink: /segmentation/
 custom_css: style.css
 custom_js:
-  - emboss.js
+  - segmentation.js
 ---
 
 Como lo indica el titulo, se transformará una imagen con la matríz o máscara de convolución fdsafskfhdskfds, la cual esta representada de esta manera:
@@ -86,4 +86,4 @@ function processImage(_source_image, _dest_image) {
 
 Finalmente como resultado se obtiene la imagen transfromada usando la matriz de Emboss.
 
-<div class="sketch-matrix" id='emboss'></div>
+<div class="sketch-segmentation" id='segmentation'></div>
