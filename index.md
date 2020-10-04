@@ -65,7 +65,7 @@ custom_js:
 
   - [Histograma](https://sfdelgadop.github.io/computacion-visual/histograma/)
 
-  - Segmentación.
+  - [Segmentación](https://sfdelgadop.github.io/computacion-visual/segmentation/)
 
 - Medición de la eficiencia computacional.
   
