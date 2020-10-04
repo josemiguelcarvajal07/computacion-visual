@@ -13,11 +13,11 @@ Como lo indica el titulo, vamos a convertir una imagen a color a una imagen en e
     <b>Luma = R*(0.299)+G*(0.587)+ B*(0.0114)</b>
 </div>
 
-Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen a color de un gato.
+Esta es la imagen que se transformará, como se puede observar esta es una imagen a color de un gato.
 
 <img src="../images/Cat.jpg" alt="Cat" class="center-image">
 
-y ahora procedemos a transformar esta imagen a una imagen de escala de grises mediante el metodo de promedio RGB usando el siguiente script:
+Y ahora se procede a transformar esta imagen a una imagen de escala de grises mediante el metodo de promedio RGB usando el siguiente script:
 
 ```js
 let img;
@@ -55,6 +55,6 @@ function draw() {
 }
 ```
 
-Finalmente como resultado obtenemos la imagen en escala de grises
+Finalmente como resultado se obtiene la imagen en escala de grises
 
 <div class="sketch-luma" id='luma'></div>
