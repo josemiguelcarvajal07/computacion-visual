@@ -6,7 +6,7 @@ custom_css: style.css
 custom_js:
   - video-3.js
 ---
-Se analizará la eficiencia computacional de un video mediante la funcion frameRate() de p5.js, se puede observar este video de un playa.
+Se analizará la eficiencia computacional de un video mediante la funcion frameRate() de p5.js, se puede observar este video de un león y un cocodrilo.
 
 <video src="../videos/video-3.mp4" width="640" height="360" autoplay muted loop>
   <!-- <source src="../videos/video-1.mp4" type="video/mp4"> -->
