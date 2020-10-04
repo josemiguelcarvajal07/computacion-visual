@@ -68,3 +68,9 @@ custom_js:
   - Segmentación.
 
 - Medición de la eficiencia computacional.
+  
+  - [Demostración de eficiencia de video 1](https://sfdelgadop.github.io/computacion-visual/video-1/)
+
+  - [Demostración de eficiencia de video 2](https://sfdelgadop.github.io/computacion-visual/video-2/)
+
+  - [Demostración de eficiencia de video 3](https://sfdelgadop.github.io/computacion-visual/video-3/)

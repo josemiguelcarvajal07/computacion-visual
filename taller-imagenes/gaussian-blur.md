@@ -7,15 +7,15 @@ custom_js:
   - gaussian-blur.js
 ---
 
-Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolución Gaussian-Blur, la cual esta representada de esta manera:
+Como lo indica el titulo, se transformará una imagen con la matríz o máscara de convolución Gaussian-Blur, la cual esta representada de esta manera:
 
 <img src="../images/Gaussian-blur-matrix.svg" alt="Gaussian-blur Matrix" class="center-matrix">
 
-Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen de un Tigre.
+Esta es la imagen que se transformará, como se puede observar esta es una imagen de un Tigre.
 
 <img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
 
-y ahora procedemos a transformar esta imagen con la matriz de convolución usando el siguiente script:
+Y ahora se procede a transformar esta imagen con la matriz de convolución usando el siguiente script:
 
 ```js
 var img;
@@ -105,11 +105,11 @@ function mousePressed() {
 }
 ```
 
-Finalmente como resultado obtenemos la imagen borrosa usando la matriz de Gaussian-blur.
+Finalmente como resultado se obtiene la imagen borrosa usando la matriz de Gaussian-blur.
 
 <div class="center-text">
 
-<b>Si quieres aumentar el efecto de la convolución haz click en la imagen.</b>
+<b>Si se quiere aumentar el efecto de la convolución hacer click en la imagen.</b>
 
 </div>
 

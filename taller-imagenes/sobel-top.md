@@ -7,15 +7,15 @@ custom_js:
   - sobel-top.js
 ---
 
-Como lo indica el titulo, vamos a transformar una imagen con la matríz o máscara de convolución Sobel Top, la cual esta representada de esta manera:
+Como lo indica el titulo, se transformará una imagen con la matríz o máscara de convolución Sobel Top, la cual esta representada de esta manera:
 
 <img src="../images/Sobel-Top-Matrix.png" alt="Sobel-Top Matrix" class="center-matrix">
 
-Esta es la imagen que vamos a transformar, como podemos observar esta es una imagen de un Tigre.
+Esta es la imagen que se transformará, como se puede observar esta es una imagen de un Tigre.
 
 <img src="../images/Tiger.jpg" alt="Tiger" class="center-image">
 
-y ahora procedemos a transformar esta imagen con la matriz de convolución usando el siguiente script:
+Y ahora se procede a transformar esta imagen con la matriz de convolución usando el siguiente script:
 
 ```js
 var source_image, dest_image;
@@ -84,11 +84,11 @@ function processImage(_source_image, _dest_image) {
 }
 ```
 
-Finalmente como resultado obtenemos la imagen transfromada usando la matriz de Sobel Top.
+Finalmente como resultado se obtiene la imagen transfromada usando la matriz de Sobel Top.
 
 <div class="center-text">
 
-<b>Si quieres aumentar el efecto de la convolución haz click en la imagen.</b>
+<b>Si se quiere aumentar el efecto de la convolución hacer click en la imagen.</b>
 
 </div>
 
