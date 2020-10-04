@@ -40,7 +40,8 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(320, 240);
+    var myCanvas = createCanvas(320, 240);
+    myCanvas.parent("segmentation");
     video = createCapture(VIDEO);
     video.size(width, height);
     video.hide(); // Hide the video element
