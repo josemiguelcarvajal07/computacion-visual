@@ -7,7 +7,7 @@ custom_js:
   - histograma.js
 ---
 
-A lo largo de esta página, vamos a documentar el estudio realizado para extraer el histograma de una imagen usango p5.js, las imagenes a analizar se pueden ir camiando mediante las letras:
+A lo largo de esta página se va a documentar el estudio realizado para extraer el histograma de una imagen usango p5.js, las imagenes a analizar se pueden ir camiando mediante los siguiente comandos con letras:
 
 - Letra "a": para mostrar la imagen de subnautica
 - Letra "b": para mostrar la imagen de Assassin's Creed Unity
@@ -141,5 +141,4 @@ function keyPressed() {
   }
 }
 ```
-
 <div class="histograma" id='histograma'></div>
