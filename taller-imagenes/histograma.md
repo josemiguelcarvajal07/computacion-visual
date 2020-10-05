@@ -141,4 +141,9 @@ function keyPressed() {
   }
 }
 ```
-<div class="histograma" id='histograma'></div>
+
+<div class="center-text">
+
+<div class="sketch-matrix" id='histograma'></div>
+
+</div>

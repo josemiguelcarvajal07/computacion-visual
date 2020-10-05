@@ -17,7 +17,8 @@ function setup() {
   width = 580;
   height = 600;
 
-  createCanvas(width, height);
+  var mycanvas = createCanvas(width, height);
+  mycanvas.parent("histograma");
   noLoop();
 }
 
