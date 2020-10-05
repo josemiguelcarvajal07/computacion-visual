@@ -26,10 +26,6 @@ custom_js:
 
 </p>
 
-<h1 class="center-text"> Ilusiones ópticas</h1>
-
-- TODO Poner acá cosas de ilusiones opticas
-
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
