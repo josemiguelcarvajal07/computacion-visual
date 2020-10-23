@@ -1,43 +1,39 @@
 function setup() {
-  var myCanvas = createCanvas(800, 535);
+  var myCanvas = createCanvas(800, 527);
   myCanvas.parent("cafe-wall");
   background("#808080");
-//   smooth();
-//   noLoop();
   mouseMoved = function () {
     draw();
   };
 }
 
-function drawRow(row) {
-  var cWidth = 55;
-  var cHeight = 55;
-  var linexHeight = 4;
-  var lineyHeight = 4;
-
-  yPos = row * (cHeight + lineyHeight) + lineyHeight;
-  numCells = Math.ceil(800 / cWidth) + 3;
-  for (var i = -80; i < numCells; i++) {
+function dibujarFila(fila) {
+  posicionVertical = fila * 59;
+  var i = -100;
+  while (i <= 20) {
     if (i % 2 == 0) {
       fill("#000000");
     } else {
       fill("#ffffff");
     }
     noStroke();
-    var pos = row % 4;
-    if (pos == 3) pos = 1;
+    var posicionLadrillo = fila % 4;
+    if (posicionLadrillo == 3) posicionLadrillo = 1;
     rect(
-      i * (cWidth + linexHeight) - (((pos * mouseX) / 15) % (2 * cWidth)) + 15,
-      yPos,
-      cWidth,
-      cHeight
+      i * 59 - (((posicionLadrillo * mouseX) / 10) % 100) + 10,
+      posicionVertical,
+      55,
+      55
     );
+    i++;
   }
 }
 
 function draw() {
+  var i = 0;
   background("#808080");
-  for (var i = 0; i < 9; i = i + 1) {
-    drawRow(i);
+  while (i < 9) {
+    dibujarFila(i);
+    i++;
   }
 }
