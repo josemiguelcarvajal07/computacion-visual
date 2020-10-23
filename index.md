@@ -27,6 +27,12 @@ custom_js:
 </p>
 
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
+<h1 class="center-text">Taller de ilusiones visuales</h1>
+
+- Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométricas, ambiguas, etc.), al menos dos con movimiento y dos con interactividad.
+
+  - [Ilusion óptica Café wall (Geométrica).](https://sfdelgadop.github.io/computacion-visual/cafe-wall/)
+
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
 - Conversión a escala de grises
