@@ -33,6 +33,8 @@ custom_js:
 
   - [Ilusion óptica Café wall (Geométrica).](https://sfdelgadop.github.io/computacion-visual/cafe-wall/)
 
+  - [Ilusion óptica Wagon wheel.](https://sfdelgadop.github.io/computacion-visual/wagon-wheel/)
+
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
 - Conversión a escala de grises
