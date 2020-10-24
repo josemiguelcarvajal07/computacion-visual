@@ -37,6 +37,8 @@ custom_js:
 
   - [Ilusiones de figuras de Kanizsa (Ilusión ambigua).](https://sfdelgadop.github.io/computacion-visual/kanizsa/)
 
+  - [Ilusión de Ebbinghaus.](https://sfdelgadop.github.io/computacion-visual/ebbinghaus/)
+
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
 - Conversión a escala de grises
