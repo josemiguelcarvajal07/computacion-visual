@@ -31,9 +31,11 @@ custom_js:
 
 - Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométricas, ambiguas, etc.), al menos dos con movimiento y dos con interactividad.
 
-  - [Ilusion óptica Café wall (Geométrica).](https://sfdelgadop.github.io/computacion-visual/cafe-wall/)
+  - [Ilusion óptica Café wall (Ilusión geométrica).](https://sfdelgadop.github.io/computacion-visual/cafe-wall/)
 
   - [Ilusion óptica Wagon wheel.](https://sfdelgadop.github.io/computacion-visual/wagon-wheel/)
+
+  - [Ilusiones de figuras de Kanizsa (Ilusión ambigua).](https://sfdelgadop.github.io/computacion-visual/kanizsa/)
 
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
