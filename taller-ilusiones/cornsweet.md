@@ -11,7 +11,7 @@ El efecto Cornsweet o ilusión Cornsweet es una ilusión óptica que fue descrit
 Además, influye que el color de la parte medial, por la forma de los bloques, está invertida: la parte de abajo del bloque superior se oscurece en comparación con la parte superior (porque le daría la sombra) y la parte superior del bloque inferior es muy clara porque le da la luz (y por tanto se supone que ese es su color).
 Por otro lado, cuando los bordes de dos objetos (yuxtapuestos) cambian de tono y/o luminosidad, el contraste entre ellos hace que se magnifiquen las diferencias (y que lo claro parezca más claro y lo oscuro, más oscuro). Esto se conoce como ley de contraste simultáneo de los colores y lo estudió y explicó Chevreul. Lo podemos ver más claramente en la siguiente imagen:
 
-<img src="../images/Cornsweet.png" alt="cornsweet" class="center-image">
+<img src="../images/Cornsweet.PNG" alt="cornsweet" class="center-image">
 
 A continuación se implementa un canvas mostrando la ilusión en el cual se puede observar que ambos bloques tiene el mismo color al mover el puntero de manera horizontal:
 
