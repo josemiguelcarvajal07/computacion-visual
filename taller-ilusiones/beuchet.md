@@ -20,4 +20,6 @@ Trabajo reciente sugiere que otro factor critico envuelto en la percepción de l
 
 A continuación se implementa un canvas mostrando la ilusión en el cual se puede observar que el tamaño de los circulos es igual al mover el puntero de manera horizontal:
 
-<div class="sketch-averages" id='beuchet'></div>
+<div class="center-text">
+<div class="center-image" id='beuchet'></div>
+</div>
