@@ -39,7 +39,7 @@ custom_js:
 
   - [Ilusión de Ebbinghaus.](https://sfdelgadop.github.io/computacion-visual/ebbinghaus/)
   
-  - [Efecto Cornsweet.](https://sfdelgadop.github.io/computacion-visual/ebbinghaus/)
+  - [Efecto Cornsweet.](https://sfdelgadop.github.io/computacion-visual/cornsweet/)
 
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
