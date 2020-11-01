@@ -6,19 +6,17 @@ custom_css: style.css
 custom_js:
   - beuchet.js
 ---
-La ilusión Ebbinghaus o tambien llamada circulos Titchener es una ilusión optica de percepción de tamaño relativo, llamada asi por su descubridor, el psicologo alemán Hermann Ebbinghaus (1850–1909), la ilusión fue popularizada por Edward B. Titchener en un libro de psicologia experimental en 1901, por ello tiene su nombre alternativo.
+La ilusión óptica creada por la Silla de Beuchet es una ilusión óptica que juega con nuestra percepción visual, gracias a que nuestro cerebro piensa que las cosas que se alinean perfectamente en el mundo realmente son de esta manera. Pero esta ilusión funciona separando las patas y el asiento, por una gran distancia por lo cual, el asiento de la silla se encuentra a una distancia mucho más grande que las patas, por este mismo motivo debe ser más grande, para mantener las dimensiones. Luego debemos pararnos en el sitio correcto para que la silla parezca una pieza completa.
 
-En esta ilusión dos circulos de igual tamaño se ponen de manera cercana, uno es rodeado por circulos grandes, mientras el otro es rodeado por circulos pequeños.
+Como esto de tener un espaldar muy grande y unas patas más pequeñas o normales no es nada intuitivo el cerebro une las partes y crea nuestra Silla de Beuchet.
 
-Como resultado de la juxtaposición de los circulos, el circulo central rodeado de circulos grandes parece ser mas pequeño que el circulo rodeado de circulos pequeños, cuando en realidad son de igual tamaño
+Aquí se puede observar una imagen mostrando la ilusión óptica, pareciera que las personas tienen una diferencia de tamaño muy grande, pero lo cierto es que no es así:
 
-Aqui se puede observar un imagen mostrando la ilusión optica:
 
 <img src="../images/BeuchetChair.jpg" alt="beuchet" class="center-image">
 
-Trabajo reciente sugiere que otro factor critico envuelto en la percepción de la ilusión Ebbinghaus es la distancia de los circulos que rodean al circulo central. Sin importar el tamaño relativo, si los circulos que rodean al circulo central estan mas cerca a este, hacen que el circulo central parezca mas grande, y si estan mas lejos parece mas pequeño de su verdadero tamaño.
 
-A continuación se implementa un canvas mostrando la ilusión en el cual se puede observar que el tamaño de los circulos es igual al mover el puntero de manera horizontal:
+A continuación, se implementa un canvas mostrando la ilusión en el cual se puede observar la silla de manera normal, pero si se desliza el mouse de manera horizontal, se logra percibir que son dos piezas separadas y una de mayor tamaño que la otra:
 
 <div class="center-text">
 <div class="center-image" id='beuchet'></div>
