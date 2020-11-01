@@ -21,6 +21,6 @@ custom_css: style.css
 2. Describa brevemente las referencias estudiadas y los posibles temas en los que le gustaría profundizar.
 </h3>
 
-Primeramente se investigó cuales fueron las posibles ilusiones que se querian hacer, se obtuvo informacion sobre cada tipo de ilusión y luego se procedio a investigar las herramientas de P5.js que permitirian realizar la implentación de estas.
+Primeramente se investigó cuales fueron las posibles ilusiones que se querian hacer, se obtuvo informacion sobre cada tipo de ilusión y luego se procedió a investigar las herramientas de P5.js que permitirian realizar la implentación de estas.
 
-Finalmente nos gustaria profundizar en lo temas de manejo de 3D con p5.js, nos parecio interesante. 
+Finalmente nos gustaria profundizar en lo temas de manejo de canvas 3D con P5.js, los cuales nos parecieron interesantes. 
