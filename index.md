@@ -29,7 +29,7 @@ custom_js:
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
 <h1 class="center-text">Taller de ilusiones visuales</h1>
 
-- Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométricas, ambiguas, etc.), al menos dos con movimiento y dos con interactividad.
+- Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométricas, ambiguas, etc.), al menos dos con movimiento, dos con interactividad y una en 3D.
 
   - [Ilusion óptica Café wall (Ilusión geométrica).](https://sfdelgadop.github.io/computacion-visual/cafe-wall/)
 
@@ -42,6 +42,10 @@ custom_js:
   - [Efecto Cornsweet.](https://sfdelgadop.github.io/computacion-visual/cornsweet/)
 
   - [Silla de Beuchet.](https://sfdelgadop.github.io/computacion-visual/beuchet/)
+
+- Discusión.
+
+  - [Tabla de datos y referencias.](https://sfdelgadop.github.io/computacion-visual/discusion/)
 
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
