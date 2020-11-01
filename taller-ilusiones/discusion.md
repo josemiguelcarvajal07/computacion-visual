@@ -18,7 +18,7 @@ custom_css: style.css
 | [Silla de Beuchet.](https://sfdelgadop.github.io/computacion-visual/beuchet/) | Perspectiva | [Referencia](https://www.youtube.com/watch?v=36R1Ez2EXS0) | Movimiento del cursor modifica la ilusión | [Codigo](https://github.com/sfdelgadop/computacion-visual/blob/gh-pages/sketches/beuchet.js) |
 
 <h3>
-2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar
+2. Describa brevemente las referencias estudiadas y los posibles temas en los que le gustaría profundizar.
 </h3>
 
 Primeramente se investigó cuales fueron las posibles ilusiones que se querian hacer, se obtuvo informacion sobre cada tipo de ilusión y luego se procedio a investigar las herramientas de P5.js que permitirian realizar la implentación de estas.
