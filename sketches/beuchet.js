@@ -4,10 +4,11 @@ function setup() {
 }
 
 function draw() {
+  var k = map(mouseX, 0, width, 200, 0);
   background(0);
   stroke(101,82,82);
   fill(255,255,255);
-  translate(0,0,mouseX);
+  translate(0,0,k);
   translate(width/2, height/2, -200);
   rotateX(radians(-10));
   rotateY(radians(-57));
