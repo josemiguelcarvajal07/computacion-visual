@@ -41,6 +41,8 @@ custom_js:
   
   - [Efecto Cornsweet.](https://sfdelgadop.github.io/computacion-visual/cornsweet/)
 
+  - [Silla de Beuchet.](https://sfdelgadop.github.io/computacion-visual/beuchet/)
+
 <h1 class="center-text">Taller de análisis de imágenes por software</h1> 
 
 - Conversión a escala de grises
