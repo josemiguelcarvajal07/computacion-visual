@@ -26,6 +26,14 @@ custom_js:
 
 </p>
 
+<hi class ="center-text">Taller de iluminación</h1>
+
+- [Luz Ambiental](https://sfdelgadop.github.io/computacion-visual/luz-ambiental/)
+
+- [Atenuación de Luz](https://sfdelgadop.github.io/computacion-visual/atenuacion/)
+
+- [Niebla](https://sfdelgadop.github.io/computacion-visual/niebla/)
+
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
 <h1 class="center-text">Taller de ilusiones visuales</h1>
 
