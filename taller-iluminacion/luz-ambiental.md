@@ -19,5 +19,5 @@ Aquí se puede observar una imagen mostrando la ilusión óptica, pareciera que 
 A continuación, se implementa un canvas mostrando la ilusión en el cual se puede observar la silla de manera normal, pero si se desliza el mouse de manera horizontal, se logra percibir que son dos piezas separadas y una de mayor tamaño que la otra:
 
 <div class="center-text">
-<div class="center-image" id='beuchet'></div>
+<div class="center-image" id='ambiental'></div>
 </div>
