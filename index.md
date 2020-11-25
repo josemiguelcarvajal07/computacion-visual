@@ -34,7 +34,9 @@ custom_js:
 
 - [Niebla](https://sfdelgadop.github.io/computacion-visual/niebla/)
 
-- [Combinación](https://sfdelgadop.github.io/computacion-visual/luces/)
+- [Por pixel-vertice](https://sfdelgadop.github.io/computacion-visual/luces/)
+
+- [Nodos](https://sfdelgadop.github.io/computacion-visual/nodos/)
 
 
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->
