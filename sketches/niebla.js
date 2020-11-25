@@ -5,7 +5,7 @@ let fog=0;
 function preload() {
 
   myShader = loadShader("fog.vert", "fog.frag");
-  imgbase = loadImage("images/gflor.jpeg");
+  imgbase = loadImage("images/flor.jpg");
 }
 
 function setup() {
