@@ -7,6 +7,7 @@ function draw() {
   background(0);
   let locX = mouseX - width / 2;
   let locY = mouseY - height / 2;
+  ambientLight(100);
   pointLight(40, 125, 240, locX, locY, 125);
   noStroke();
   sphere(100);
