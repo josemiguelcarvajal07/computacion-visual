@@ -5,13 +5,13 @@ let fog=0;
 function preload() {
 
   myShader = loadShader("fog.vert", "fog.frag");
-  imgbase = loadImage("images/flor.jpg");
+  imgbase = loadImage("../images/flor.jpg");
 }
 
 function setup() {
 
   var canvas = createCanvas(600, 600, WEBGL);
-  canvas.parent('sketch-div');
+  //canvas.parent('sketch-div');
   
   fogAmount=fog
   shader(myShader);
@@ -25,7 +25,7 @@ function draw() {
 
   rotateX(frameCount * 0.02);
   rotateY(frameCount * 0.009);
-    itgitg
+    
   shader(myShader);
   myShader.setUniform("u_fogColor", fogColor);
   myShader.setUniform("u_fogAmount", fogAmount);
