@@ -1,26 +1,45 @@
-let fogAmount;
-var gl_Fragcolor;
+let myShader;
+let fogColor = [1, 0.99, 0.99, 1];
+let fog=0;
+
+function preload() {
+
+  myShader = loadShader("fog.vert", "fog.frag");
+  imgbase = loadImage("images/flor.jpeg");
+}
 
 function setup() {
-  var myCanvas = createCanvas(800, 400, WEBGL);
-  myCanvas.parent("niebla");
-  fogAmount = createSlider(0, 10, 0);
+
+  var canvas = createCanvas(600, 600, WEBGL);
+  //canvas.parent('sketch-div');
+  
+  fogAmount=fog
+  shader(myShader);
+  myShader.setUniform("uMatcapTexture", imgbase);
+  noStroke();
 }
 
 function draw() {
-  background(0);
-  noLoop();
-  let locX = mouseX - width / 2;
-  let locY = mouseY - height / 2;
-  specularColor(255, 0, 0);
-  pointLight(40, 125, 240, locX, locY, 125);
-  noStroke();
-  sphere(100);
-  rotateX(frameCount*0.01);
-  rotateY(frameCount*0.01);
-  rotateZ(frameCount*0.01);
-  translate(200,200,0);
-  sphere(50);
-  translate(0,-200,0);
-  cone(40,70) 
+  background(211,211,211);
+  fogAmount=fog
+
+  rotateX(frameCount * 0.02);
+  rotateY(frameCount * 0.009);
+    
+  shader(myShader);
+  myShader.setUniform("u_fogColor", fogColor);
+  myShader.setUniform("u_fogAmount", fogAmount);
+    
+
+  box(width / 2);
+}
+
+function mouseMoved() {
+  fog = mouseX*0.002;
+  if (fog > 1) {
+    fog = 1;
+  }
+  if (fog < 0) {
+    fog = 0;
+  }
 }
