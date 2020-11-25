@@ -9,10 +9,9 @@ custom_js:
 Para realizar una implementación de niebla, se debe usar algún tipo de cálculo de profundidad de la cámara para hacer que el color se asemeje a la niebla. para ello se debe implementar la siguiente fórmula:
 
 
-<img src="../images/ecuacionfog.jpg" alt="fog" class="center-image">
+<img src="../images/ecuacionfog.png" alt="fog" class="center-image">
 
-en donde gl_fragcolor representar un valor entre creo y uno, que es el porcentaje de ambos colores. La función mix mezcla los dos primeros valores, cuando fogAmount es cero, mix devuelve el color original, por el contrario cuando es uno devuelve el color de la niebla.
-
+en donde gl_fragcolor representar un valor entre creo y uno, que es el porcentaje de ambos colores. La función mix mezcla los dos primeros valores, cuando fogAmount es cero, mix devuelve el color original, por el contrario cuando es uno devuelve el color de la niebla. Al realizar esta implementación se obtiene una niebla en toda la figura que se está dibujando sin tomar en cuenta la posición de la cámara. 
 <div class="center-text">
 <div class="center-image" id='niebla'></div>
 </div>
