@@ -8,6 +8,6 @@ Para esta parte del taller se utilizó una librería para javascript llamada Thr
 
 para este ejersicio se pidió usar 8 funtes de luz, para esto usamos luces puntuales las cuales tienen un comportamiento similar a estar afiliadas a nub-nodes.
 
-se usaron las figuras anteriores reorganizadas y se ubicaron las luces de manera estratégica además se usó iluminación pixel a pixel para hacer más claras ñas funtes de luz.
+se usaron las figuras anteriores reorganizadas y se ubicaron las luces de manera estratégica además se usó iluminación pixel a pixel para hacer más claras las funtes de luz.
 
 <img src="../images/nub-nodes.png" alt="atenuacion" class="center-image">
