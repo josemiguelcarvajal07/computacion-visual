@@ -3,7 +3,7 @@ let fogColor = [1, 0.99, 0.99, 1];
 let fog=0;
 
 function preload() {
-  myShader = loadShader("f../shaders/fog.vert", "../shaders/fog.frag");
+  myShader = loadShader("../shaders/fog.vert", "../shaders/fog.frag");
   imgbase = loadImage("../images/flor.jpg");
 }
 
