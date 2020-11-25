@@ -6,17 +6,18 @@ custom_css: style.css
 custom_js:
   - atenuacion.js
 ---
-La ilusión óptica creada por la Silla de Beuchet es una ilusión óptica que juega con nuestra percepción visual, gracias a que nuestro cerebro piensa que las cosas que se alinean perfectamente en el mundo realmente son de esta manera. Pero esta ilusión funciona separando las patas y el asiento, por una gran distancia por lo cual, el asiento de la silla se encuentra a una distancia mucho más grande que las patas, por este mismo motivo debe ser más grande, para mantener las dimensiones. Luego debemos pararnos en el sitio correcto para que la silla parezca una pieza completa.
-
-Como esto de tener un espaldar muy grande y unas patas más pequeñas o normales no es nada intuitivo el cerebro une las partes y crea nuestra Silla de Beuchet.
-
-Aquí se puede observar una imagen mostrando la ilusión óptica, pareciera que las personas tienen una diferencia de tamaño muy grande, pero lo cierto es que no es así:
+El efecto de atenuación, es una propiedad de la luz en la cual pierde intensidad cuanto más se aleja de la fuente. Si se modela mediante el comportamiento físico, se obtiene que la intensidad de la luz decae con el inverso del radio al cuadrado. Pero si se realiza de esta menra se puede ver que la luz disminuye muy rápido. por lo cual se utiliza la atenuación proporcional al inverso del radio. Para este caso en particular se utilizó lightFalloff() de P5.js, el cual lo calcula mediante la siguiente formula:
 
 
-<img src="../images/BeuchetChair.jpg" alt="beuchet" class="center-image">
+<img src="../images/atenuacion.png" alt="atenuacion" class="center-image">
 
+en donde:
+- k es la constante de decaimiento constante
+- l es la constante de decaimiento lineal
+- c es la constante de decaimiento cuadratico
+- d es la distancia entre el objeto y la fuente de luz
 
-A continuación, se implementa un canvas mostrando la ilusión en el cual se puede observar la silla de manera normal, pero si se desliza el mouse de manera horizontal, se logra percibir que son dos piezas separadas y una de mayor tamaño que la otra:
+para el funcionamiento, mueva el mouse para mover el punto de luz, y para cambiar las constantes deslice los slider de la parte de abaje, el primero referencia la constante, el segundo la constante lineal, y el tercero la constante cuadratica. La constante lineal esta reescalada en un factor de 1/1000, y la cuadratica en un facor de 1/10000. Todo esto para evitar la atenuación exagerda de la luz.
 
 <div class="center-text">
 <div class="center-image" id='atenuacion'></div>
