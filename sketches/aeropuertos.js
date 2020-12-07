@@ -3,22 +3,22 @@ var flights = [];
 
 var pg
 
-var flight = function(d,flo,fla,tlo,tla,fc,tc) {
-  this.distance = d
-  this.from_long = flo
-  this.from_lat = fla
-  this.to_long = tlo
-  this.to_lat = tla
-  this.from_country = fc
-  this.to_country = tc
+var flight = function(distance,from_long,from_lat,to_long,to_lat,from_country,to_country) {
+  this.distance = distance
+  this.from_long = from_long
+  this.from_lat = from_lat
+  this.to_long = to_long
+  this.to_lat = to_lat
+  this.from_country = from_country
+  this.to_country = to_country
 
   this.departureX = map(this.from_long, -180,180,0,width)
-  this.departureY = map(this.from_lat, -90,90,height/2,0)
+  this.departureY = map(this.from_lat, -90,90,height,0)  
   this.arrivalX = map(this.to_long, -180,180,0,width)
-  this.arrivalY = map(this.to_lat, -90,90,height,height/2)
+  this.arrivalY = map(this.to_lat, -90,90,height,0)
 
   this.selected = function() {
-    if ( dist(mouseX, mouseY, this.departureX, this.departureY) < 10 ) {
+    if ( dist(mouseX, mouseY, this.departureX, this.departureY) < 5 ) {
         return true
     } else {
         return false
@@ -32,7 +32,7 @@ var flight = function(d,flo,fla,tlo,tla,fc,tc) {
 	
   this.drawSelectedAirport = function() {
     if ( this.selected() ) {
-      fill(255,0,0,25)
+      fill(235, 56, 12,25)
       ellipse(this.departureX, this.departureY, 5,5)
       ellipse(this.arrivalX, this.arrivalY, 5,5)
     }
@@ -44,7 +44,7 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(800, 800);
+  var myCanvas = createCanvas(900, 500);
   myCanvas.parent("aeropuertos");
   noStroke()
   noLoop()
@@ -69,17 +69,17 @@ function setup() {
     flights.push(this_flight)
   }
 
-  pg = createGraphics(800,800);
-  pg.background(255,255,255);
+  pg = createGraphics(900,500);
+  pg.background(100, 145, 217);
   pg.noStroke();
-  pg.fill(0,0,0,1);
+  pg.fill(255,255,255,30);
   for ( var i in flights ) {
     flights[i].drawBackgroundAirport()
 	}
 }
 
 function draw() {
-  background(255,255,255)
+  background(100, 145, 217)
   image(pg,0,0)
   for ( var i in flights ) {
     flights[i].drawSelectedAirport()

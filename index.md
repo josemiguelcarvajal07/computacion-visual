@@ -30,19 +30,19 @@ custom_js:
 
 Decidimos realizar nuestra profundizacion sobre la visualizacion de datos.
 
-- [Aeropuertos del mundo](https://sfdelgadop.github.io/computacion-visual/aeropuertos/)
+- [Aeropuertos del mundo.](https://sfdelgadop.github.io/computacion-visual/aeropuertos/)
 
 <h1 class ="center-text">Taller de iluminación</h1>
 
-- [Luz Ambiental](https://sfdelgadop.github.io/computacion-visual/luz-ambiental/)
+- [Luz Ambiental.](https://sfdelgadop.github.io/computacion-visual/luz-ambiental/)
 
-- [Atenuación de Luz](https://sfdelgadop.github.io/computacion-visual/atenuacion/)
+- [Atenuación de Luz.](https://sfdelgadop.github.io/computacion-visual/atenuacion/)
 
-- [Niebla](https://sfdelgadop.github.io/computacion-visual/niebla/)
+- [Niebla.](https://sfdelgadop.github.io/computacion-visual/niebla/)
 
-- [Por pixel-vertice](https://sfdelgadop.github.io/computacion-visual/luces/)
+- [Por pixel-vertice.](https://sfdelgadop.github.io/computacion-visual/luces/)
 
-- [Nodos](https://sfdelgadop.github.io/computacion-visual/nodos/)
+- [Nodos.](https://sfdelgadop.github.io/computacion-visual/nodos/)
 
 
 <!-- [GUIA](http://127.0.0.1:4000/computacion-visual/guia/) -->

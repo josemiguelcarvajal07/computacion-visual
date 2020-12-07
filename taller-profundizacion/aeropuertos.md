@@ -9,4 +9,4 @@ custom_js:
 
 adasdadasda
 
-<div class="sketch-averages" id='aeropuertos'></div>
+<div id='aeropuertos'></div>
