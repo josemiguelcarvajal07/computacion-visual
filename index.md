@@ -30,7 +30,7 @@ custom_js:
 
 Decidimos realizar nuestra profundizacion sobre la visualizacion de datos.
 
-- [Aeropuertos](https://sfdelgadop.github.io/computacion-visual/aeropuertos/)
+- [Aeropuertos del mundo](https://sfdelgadop.github.io/computacion-visual/aeropuertos/)
 
 <h1 class ="center-text">Taller de iluminación</h1>
 
