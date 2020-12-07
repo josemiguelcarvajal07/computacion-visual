@@ -26,6 +26,12 @@ custom_js:
 
 </p>
 
+<h1 class ="center-text">Profundización</h1>
+
+Decidimos realizar nuestra profundizacion sobre la visualizacion de datos.
+
+- [Aeropuertos](https://sfdelgadop.github.io/computacion-visual/aeropuertos/)
+
 <h1 class ="center-text">Taller de iluminación</h1>
 
 - [Luz Ambiental](https://sfdelgadop.github.io/computacion-visual/luz-ambiental/)
