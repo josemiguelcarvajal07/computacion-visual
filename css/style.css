@@ -66,3 +66,19 @@ video {
   height: auto;
   display: inline-block;
 }
+
+.map-text {
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  width: 800px;
+  font-size: 18px;
+}
+
+.sketch-map {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
