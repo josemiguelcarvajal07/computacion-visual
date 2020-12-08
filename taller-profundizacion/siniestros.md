@@ -9,7 +9,7 @@ custom_js:
 
 Para el tema se profundización, se eligió como uno de los temas, la visualización de siniestros en la ciudad de Bogotá, la cual se tiene una caracteristica de recolectar muy bien estos datos, pero no utilizarlos en gran medida para tomar acciones correctivas. 
 
-Se realizó una división del mapa de Bogotá en sus 20 localidades, y en el siguiente [enlace](/googleMaps/googleMaps.html) se puede acceder al resultado, en el cual en la parte superior se tienen 4 filtros, en el primero, que hace referencia a la gravedad máxima del siniestro, en la cual se encuentra:
+Se realizó una división del mapa de Bogotá en sus 20 localidades, y en el siguiente [enlace](../googleMaps/googleMaps.html) se puede acceder al resultado, en el cual en la parte superior se tienen 4 filtros, en el primero, que hace referencia a la gravedad máxima del siniestro, en la cual se encuentra:
 
 - Solo daños: para aquellos siniestros en los cuales no se vio afectada la salud de ninguna persona.
 - Con heridos: para aquellos siniestros en los cuales se vio afectada la salud de al menos una persona, pero sin fatalidad.
