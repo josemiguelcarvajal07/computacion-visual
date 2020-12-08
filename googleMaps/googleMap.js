@@ -1,6 +1,6 @@
 var map;
-var minVal;
-var maxVal;
+var minVal = Number.MAX_VALUE;
+var maxVal = -Number.MAX_VALUE;
 var tipo = 'CHOQUE';
 var date = '2007';
 var date_mes = 'Enero';
@@ -23,7 +23,7 @@ async function initMap() {
       idPropertyName: "Identificador unico de la localidad",
     });
   });
-
+  map.data.setStyle(styleFeature);
   map.data.addListener("mouseover", mouseInToRegion);
   map.data.addListener("mouseout", mouseOutOfRegion);
   auxData();
@@ -67,6 +67,45 @@ function clearCensusData() {
   document.getElementById("tooltip").style.display = "none";
 }
 
+function styleFeature(feature) {
+  var low = [5, 69, 54];
+  var high = [151, 83, 34];
+
+  // delta represents where the value sits between the min and max
+  var delta =
+    (feature.getProperty("bicycle_data") - minVal) / (maxVal - minVal);
+
+  var color = [];
+  for (var i = 0; i < 3; i++) {
+    // calculate an integer color based on the delta
+    color[i] = (high[i] - low[i]) * delta + low[i];
+  }
+
+  // determine whether to show this shape or not
+  var showRow = true;
+  if (
+    feature.getProperty("bicycle_data") == null ||
+    isNaN(feature.getProperty("bicycle_data"))
+  ) {
+    showRow = false;
+  }
+
+  var outlineWeight = 0.5,
+    zIndex = 1;
+  if (feature.getProperty("state") === "hover") {
+    outlineWeight = zIndex = 2;
+  }
+
+  return {
+    strokeWeight: outlineWeight,
+    strokeColor: "#fff",
+    zIndex: zIndex,
+    fillColor: "hsl(" + color[0] + "," + color[1] + "%," + color[2] + "%)",
+    fillOpacity: 0.75,
+    visible: showRow,
+  };
+}
+
 function auxData() {
   $.ajax({
     type: "GET",
@@ -91,6 +130,12 @@ function processData(allText) {
         if(datas[3]==gravedad){
           if(datas[4]==date){
             if(datas[5]==date_mes){
+              if (minVal >= datas[6]){
+                minVal = datas[6]
+              }
+              if(maxVal <= datas[6]){
+                maxVal = datas[6]
+              }
               UTAMName = datas[0];
               loaded[UTAMName] = datas[6];
               map.data.getFeatureById(UTAMName).setProperty("bicycle_data", loaded[UTAMName]);
