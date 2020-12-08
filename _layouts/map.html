@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+  {% if page.custom_js %}    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js" integrity="sha512-wM+t5MzLiNHl2fwT5rWSXr2JMeymTtixiw2lWyVk1JK/jDM4RBSFoH4J8LjucwlDdY6Mu84Kj0gPXp7rLGaDyA==" crossorigin="anonymous"></script>
+    {% for js_file in page.custom_js %}
+    <script src="{{ site.baseurl }}/sketches/{{ js_file }}"></script>
+    {% endfor %}
+  {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">  
+  {% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ stylesheet }}">
+    {% endfor %}
+  {% endif %}  
+  </head>
+  <body> 
+    <a id="skip-to-content" href="#content">Saltar al contenido de la página.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1></br>
+      <a href="https://sfdelgadop.github.io/computacion-visual/" class="btn">Volver al index</a>
+      {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+      {% endif %}
+    </header>
+       
+      {{ content }}
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> es mantenido por <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>, <a href="https://github.com/lvbohorquezr">lvbohorquezr</a>, <a href="https://github.com/Acreed21">cgcontrerasm</a> y <a href="https://github.com/josemiguelcarvajal07">jmcarvajalj</a>.</span>
+        {% endif %}
+        <span class="site-footer-credits">Esta página fue generada usando <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>    
+  </body>
+</html>
