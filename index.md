@@ -32,9 +32,9 @@ Decidimos realizar nuestra profundizacion sobre la visualizacion de datos.
 
 - [Aeropuertos del mundo.](https://sfdelgadop.github.io/computacion-visual/aeropuertos/)
 
-- [Siniestros de Bogotá](https://sfdelgadop.github.io/computacion-visual/siniestros/)
+- [Siniestros de Bogotá.](https://sfdelgadop.github.io/computacion-visual/siniestros/)
 
-- [COVID-19 en Colombia](https://sfdelgadop.github.io/computacion-visual/covid/)
+- [COVID-19 en Colombia.](https://sfdelgadop.github.io/computacion-visual/covid/)
 
 <h1 class ="center-text">Taller de iluminación</h1>
 
