@@ -9,14 +9,14 @@ function toggleSong() {
 }
 
 function preload() {
-  song = loadSound('../audio/the-alphabeat.mp3'); 
+  song = loadSound('../audio/rip.mp3'); 
 }
 
 function setup() {
-  var myCanvas = createCanvas(600, 600);
+  var myCanvas = createCanvas(600, 800);
   myCanvas.parent("sonido");
   angleMode(DEGREES); // Change the mode to DEGREES
-  colorMode(HSB);
+//  colorMode(HSB);
   buttton = createButton('Toggle Play');
   buttton.mousePressed(toggleSong);
   song.play();  
