@@ -1,6 +1,6 @@
 ---
 layout: sample
-title: Sonido de la música
+title: Visualización de la música
 permalink: /sound/
 custom_css: style.css
 custom_js:
