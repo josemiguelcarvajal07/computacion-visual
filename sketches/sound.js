@@ -9,7 +9,7 @@ function toggleSong() {
 }
 
 function preload() {
-  song = loadSound('audio/the-alphabeat.mp3'); 
+  song = loadSound('../audio/the-alphabeat.mp3'); 
 }
 
 function setup() {
