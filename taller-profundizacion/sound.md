@@ -1,5 +1,5 @@
 ---
-layout: map
+layout: sample
 title: Sonido de la música
 permalink: /sound/
 custom_css: style.css
