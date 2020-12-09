@@ -36,6 +36,8 @@ Decidimos realizar nuestra profundizacion sobre la visualizacion de datos.
 
 - [COVID-19 en Colombia.](https://sfdelgadop.github.io/computacion-visual/covid/)
 
+- [Visualización de la música.](https://sfdelgadop.github.io/computacion-visual/sound/)
+
 <h1 class ="center-text">Taller de iluminación</h1>
 
 - [Luz Ambiental.](https://sfdelgadop.github.io/computacion-visual/luz-ambiental/)
