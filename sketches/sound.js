@@ -13,7 +13,7 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(600, 800);
+  var myCanvas = createCanvas(800, 600);
   myCanvas.parent("sonido");
   angleMode(DEGREES); // Change the mode to DEGREES
 //  colorMode(HSB);
