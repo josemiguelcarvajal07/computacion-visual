@@ -3,8 +3,6 @@ layout: sample
 title: Siniestros Bogotá
 permalink: /siniestros/
 custom_css: style.css
-custom_js:
-  - siniestros.js
 ---
 
 Para el tema se profundización, se eligió como uno de los temas, la visualización de siniestros en la ciudad de Bogotá, la cual se tiene una caractéristica de recolectar muy bien estos datos, pero no utilizarlos en gran medida para tomar acciones correctivas. 
